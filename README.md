@@ -1,6 +1,6 @@
 # Web App From Scratch @cmda-minor-web 2020 - 2021
 
-![Badge stating project is licensed under MIT license](https://img.shields.io/github/license/theonejonahgold/web-app-from-scratch-2021) ![Badge stating amount of issues open](https://img.shields.io/github/issues/theonejonahgold/web-app-from-scratch-2021) [![](https://img.shields.io/badge/site--status-down-red)](https://theonejonahgold.github.io/web-app-from-scratch-2021) [![Badges via shields.io](https://img.shields.io/badge/badges%20via-shields.io-brightgreen)](shields.io)
+![Badge stating project is licensed under MIT license](https://img.shields.io/github/license/theonejonahgold/web-app-from-scratch-2021) ![Badge stating amount of issues open](https://img.shields.io/github/issues/theonejonahgold/web-app-from-scratch-2021) [![](https://img.shields.io/badge/site--status-up-success)](https://theonejonahgold.github.io/web-app-from-scratch-2021) [![Badges via shields.io](https://img.shields.io/badge/badges%20via-shields.io-brightgreen)](shields.io)
 
 [Link to live version](https://theonejonahgold.github.io/web-app-from-scratch-2021)
 
