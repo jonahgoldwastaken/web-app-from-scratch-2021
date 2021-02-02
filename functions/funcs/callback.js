@@ -10,7 +10,6 @@ const {
 // 'https://accounts.spotify.com/api/token'
 exports.handler = async function (event) {
   const { code } = event.queryStringParameters
-  console.log(constants.redirect)
   const data = await fetch(
     `https://accounts.spotify.com/api/token?grant_type=authorization_code&code=${code}&redirect_uri=${SPOTIFY_REDIRECT_URI}`,
     {
