@@ -1,3 +1,3 @@
 module.exports = {
-  scopes: 'user-read-private user-read-email playlist-read-private',
+  scopes: 'user-read-private%20user-read-email%20playlist-read-private',
 }
