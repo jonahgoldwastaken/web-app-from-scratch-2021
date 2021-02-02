@@ -9,5 +9,6 @@ exports.handler = function (event, context) {
         constants.scopes
       }&redirect_uri=${encodeURIComponent(SPOTIFY_REDIRECT_URI)}`,
     },
+    body: null,
   }
 }
