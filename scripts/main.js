@@ -1,11 +1,12 @@
-import { getAuthToken } from './get-auth-token.js'
+import { prepareLoginButton, getAuthToken } from './login-flow.js'
 import { fetchCurrentUser } from './fetch-current-user.js'
 import { renderUser } from './render-data.js'
 
-if (window.location.pathname.includes('/callback')) {
+window.addEventListener('load', () => {
+  prepareLoginButton()
   getAuthToken()
-}
 
-if (!sessionStorage.getItem('spotify-token')?.includes('undefined')) {
-  fetchCurrentUser().then(renderUser)
-}
+  if (sessionStorage.getItem('spotify-token')?.includes('Bearer')) {
+    fetchCurrentUser().then(renderUser)
+  }
+})
