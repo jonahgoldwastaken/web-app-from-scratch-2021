@@ -1,7 +1,7 @@
-export { parseQueryString }
+export { parseHashString }
 
-function parseQueryString() {
-  return window.location.search
+function parseHashString() {
+  return window.location.hash
     .slice(1)
     .split('&')
     .map(entry => entry.split('='))

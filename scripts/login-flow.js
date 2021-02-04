@@ -1,35 +1,30 @@
-import { createSameOriginUrl } from './utils/fetch.js'
-import { fetchAndParseText, fetchAndParseData } from './modules/fetch.js'
-import { parseQueryString } from './modules/query.js'
+import { parseHashString } from './modules/query.js'
+import {
+  CLIENT_ID,
+  LOGIN_URL,
+  SCOPES,
+  REDIRECT_URI,
+} from './contants/spotify.js'
 
 export { prepareLoginButton, getAuthToken }
 
 function prepareLoginButton() {
   const button = document.querySelector('[data-login]')
   if (button) {
-    button.addEventListener('click', getLoginUrl)
+    button.addEventListener('click', loginButtonHandler)
   }
 }
 
-function getLoginUrl() {
-  fetchAndParseText(createSameOriginUrl('/.netlify/functions/login')).then(
-    url => {
-      window.location = url
-    }
-  )
+function loginButtonHandler() {
+  window.location = `${LOGIN_URL}?response_type=token&client_id=${CLIENT_ID}&scopes=${SCOPES}&redirect_uri=${encodeURIComponent(
+    REDIRECT_URI
+  )}`
 }
 
 function getAuthToken() {
-  if (window.location.pathname.includes('/callback')) {
-    const { code } = parseQueryString()
-    fetchAndParseData(
-      createSameOriginUrl(`/.netlify/functions/callback?code=${code}`)
-    ).then(data => {
-      sessionStorage.setItem(
-        'spotify-token',
-        `${data.token_type} ${data.access_token}`
-      )
-      window.location.replace('http://localhost:8888')
-    })
+  if (window.location.href.includes('access_token')) {
+    const { access_token } = parseHashString()
+    sessionStorage.setItem('spotify-token', `Bearer ${access_token}`)
+    window.location.replace(window.location.origin)
   }
 }

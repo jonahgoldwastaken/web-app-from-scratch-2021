@@ -1,9 +1,0 @@
-{
-  "name": "web-app-from-scratch",
-  "version": "1.0.0",
-  "private": true,
-  "license": "MIT",
-  "dependencies": {
-    "node-fetch": "^2.6.1"
-  }
-}
