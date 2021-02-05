@@ -4,17 +4,19 @@
 
 [Link to live version](https://theonejonahgold.github.io/web-app-from-scratch-2021)
 
-A goal for this app will be put here once that has been determined.
+A web app built from scratch giving you a Spotify playlist that is the perfect length for your trip.
 
 ## Index
 
 - [Getting started](#getting-started)
-- [Features](#features)
 - [APIs used](#apis-used)
+- [Features](#features)
 - [User Interaction Flow](#user-interaction-flow)
 - [Design patterns used](#design-patterns-used)
 
 ## Getting started
+
+Before you get started, I advice you to read the [APIs used](#apis-used) section, as you need a Client ID for Spotify as well as an API key for Mapquest.
 
 This project doesn't use any bundlers or dev servers. I would advice you to install [Browsersync](https://www.npmjs.com/package/browser-sync) to serve the web content in this project. You install Browsersync either through [NPM](https://www.npmjs.com), [Yarn](https://yarnpkg.com) or any other NPM package manager of choice with global installation functionality.
 
@@ -27,16 +29,40 @@ Then proceed to clone this repository.
 ```shell
 $ git clone https://github.com/theonejonahgold/web-app-from-scratch-2021 web-app
 $ cd web-app
-$ browser-sync -w -s -p 5000 # Starts a browser-sync server on port 5000 that watches for file changes in the current directory
+$ browser-sync -w -s --port 5000 # Starts a browser-sync server on port 5000 that watches for file changes in the current directory
 ```
-
-## Features
-
-- [ ] A feature list
 
 ## APIs used
 
-- [Spotify Web API](https://developer.spotify.com/documentation/web-api/)
+The APIs used both have API keys. You can put these inside the contants folder, where all constant values reside.
+
+### [Spotify Web API](https://developer.spotify.com/documentation/web-api/)
+
+The Spotify API is extremely expansive. From user information to the devices they can connect to, from artists to recommendations based on a certain song and artist. You can grab almost everything from this API, without any explicit rate limits.
+
+[This page](https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app) gives you information on how to create a Spotify Application on the Developer Platform.
+
+If you have created one, be sure to set the redirect URIs to 'http://localhost:5000' and the URL you are hosting this app on.
+
+### [Mapquest Directions API](https://developer.mapquest.com/documentation/directions-api/route/get/)
+
+The Mapquest API is quite large, and has a lot of features related to mapping. We are only using the Directions API to see how long a trip takes.
+
+This API has a rate limit of 150000 per month before you've got to pony up, so keep that in mind.
+
+Create an account [here](https://developer.mapquest.com/user/register) and get your API key from the dashboard.
+
+## Features
+
+- [x] A feature list
+- [x] Log in to Spotify
+- [ ] Search addresses
+- [ ] Get estimated time for a trip
+- [ ] Choose genres from a list
+- [ ] Choose artist from top artists
+- [ ] Choose song from top songs
+- [ ] Remove songs from recommended playlist
+- [ ] Save playlist
 
 ## User Interaction Flow
 
@@ -46,6 +72,7 @@ $ browser-sync -w -s -p 5000 # Starts a browser-sync server on port 5000 that wa
 - PubSub pattern
 - Immutability pattern
 - Composition pattern
+- Hash routing
 
 <!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
 
