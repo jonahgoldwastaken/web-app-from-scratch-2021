@@ -1,5 +1,9 @@
 export { parseHashString }
 
+/**
+ * Parses the window hash
+ * @returns {Object} Object containing window hashes
+ */
 function parseHashString() {
   return window.location.hash
     .slice(1)

@@ -1,5 +1,9 @@
 export { renderUser }
 
+/**
+ * Renders a Spotify user object to the dom
+ * @param {Object} data Spotify user object
+ */
 function renderUser(data) {
   const container = document.querySelector('[data-profile]')
   const nameElement = container.querySelector('[data-name]')
