@@ -58,6 +58,7 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 - [x] Log in to Spotify
 - [ ] Search addresses
 - [ ] Get estimated time for a trip
+- [ ] Change time for recommendations
 - [ ] Choose genres from a list
 - [ ] Choose artist from top artists
 - [ ] Choose song from top songs
