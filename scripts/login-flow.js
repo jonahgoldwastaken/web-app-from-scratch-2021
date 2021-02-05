@@ -12,9 +12,9 @@ export { prepareLoginButton, getAuthToken }
  * Adds click event listener to login button
  */
 function prepareLoginButton() {
-  const button = document.querySelector('[data-login]')
-  if (button) {
-    button.addEventListener('click', loginButtonHandler)
+  const loginButton = document.querySelector('[data-login]')
+  if (loginButton) {
+    loginButton.addEventListener('click', loginButtonHandler)
   }
 }
 
