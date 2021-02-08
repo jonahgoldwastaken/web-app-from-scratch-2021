@@ -1,12 +1,16 @@
-import { prepareLoginButton, getAuthToken } from './login-flow.js'
-import { fetchCurrentUser } from './fetch-current-user.js'
-import { renderUser } from './render-data.js'
+import { router } from './modules/router.js'
+import { route } from './utils/route.js'
+import index from './routes/index.js'
+import accessToken from './routes/accessToken.js'
+import profile from './routes/profile.js'
 
-window.addEventListener('load', () => {
-  prepareLoginButton()
-  getAuthToken()
+main()
 
-  if (sessionStorage.getItem('spotify-token')?.includes('Bearer')) {
-    fetchCurrentUser().then(renderUser)
-  }
-})
+async function main() {
+  const render = await router([
+    route('/', index),
+    route('/access_token', accessToken),
+    route('/profile', profile),
+  ])
+  render(document.querySelector('#app'))
+}

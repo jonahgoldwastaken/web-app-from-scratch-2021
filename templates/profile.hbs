@@ -1,0 +1,20 @@
+{{#unless profile}}
+  <h1>Loading profile</h1>
+{{/unless}}
+{{#if profile}}
+  <article>
+    {{#with profile}}
+      <h2>{{display_name}}</h2>
+      {{#each images}}
+        <img data-image src="{{this.url}}" alt="Profile picture of {{display_name}}" />
+      {{/each}}
+      <p data-country>Country: {{country}}</p>
+      <p data-followers>Followers: {{followers.total}}</p>
+      <ul data-externals>
+        {{#each external_urls}}
+          <li><a href='{{this.[1]}}'>{{this.[0]}}</a></li>
+        {{/each}}
+      </ul>
+    {{/with}}
+  </article>
+{{/if}}
