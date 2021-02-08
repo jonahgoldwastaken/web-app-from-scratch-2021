@@ -65,7 +65,11 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 - [ ] Remove songs from recommended playlist
 - [ ] Save playlist
 
-## User Interaction Flow
+## actor diagram
+
+![Action diagram of app](assets/actor_diagram.png)
+
+## Interaction diagram
 
 ## Design patterns used
 
