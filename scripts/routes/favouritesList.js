@@ -1,6 +1,7 @@
 import { component, fetchTemplate } from '../modules/component.js'
 import { navigate } from '../modules/router.js'
-import { fetchTopTracks, trackStorage } from '../stores/spotify.js'
+import { fetchTopTracks } from '../helpers/spotify.js'
+import { trackStorage } from '../stores/spotify.js'
 
 export default favouritesList
 
