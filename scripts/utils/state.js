@@ -42,7 +42,7 @@ function createWritableStore(initialValue, func) {
   function subscribe(func) {
     const index = subscribers.indexOf(func)
     if (index < 0) subscribers.push(func)
-    func(value)
+    func(_store)
 
     return function unsubscribe() {
       const index = subscribers.indexOf(func)

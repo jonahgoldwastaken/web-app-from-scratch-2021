@@ -1,0 +1,10 @@
+{{#if generating}}
+  <h1>Generating Triplist...</h1>
+{{/if}}
+
+{{#unless generating}}
+  <h1>Your Triplist</h1>
+  {{#each list}}
+    <p>{{this.name}}</p>
+  {{/each}}
+{{/unless}}

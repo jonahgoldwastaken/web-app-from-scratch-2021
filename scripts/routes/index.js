@@ -28,7 +28,7 @@ function mounted() {
  * Handles the login button click
  */
 function loginButtonHandler() {
-  window.location = `${LOGIN_URL}?response_type=token&client_id=${CLIENT_ID}&scopes=${SCOPES}&redirect_uri=${encodeURIComponent(
+  window.location = `${LOGIN_URL}?response_type=token&client_id=${CLIENT_ID}&scope=${SCOPES}&redirect_uri=${encodeURIComponent(
     REDIRECT_URI
   )}`
 }

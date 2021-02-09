@@ -6,7 +6,7 @@ export { fetchRoute }
 
 async function fetchRoute(departure, arrival) {
   const { route } = await fetchAndParseJSON(
-    `http://www.mapquestapi.com/directions/v2/route?key=${API_KEY}&from=${encodeURIComponent(
+    `https://www.mapquestapi.com/directions/v2/route?key=${API_KEY}&from=${encodeURIComponent(
       departure
     )}&to=${encodeURIComponent(arrival)}`
   )

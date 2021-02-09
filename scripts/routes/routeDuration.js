@@ -47,6 +47,6 @@ function updated(component) {
 
   function confirmRoute() {
     routeStorage.set(component.state.route)
-    navigate('/generator')
+    navigate('/list-favourites')
   }
 }

@@ -1,0 +1,13 @@
+<h1>Choose your favourites!</h1>
+<button data-generate>Generate list</button>
+<ul id="tracks">
+{{#each topTracks as |track|}}
+  <li>
+    <label>
+      <img src='{{track.album.images.0.url}}' alt='Album cover for {{track.album.name}}'>
+      {{track.name}} van {{track.artists.0.name}}
+      <input type='checkbox' value={{track.id}} name='favourites'>
+    </label>
+  </li>
+{{/each}}
+</ul>
