@@ -1,8 +1,8 @@
 import {
-    compileToHash,
-    findCurrentRoute,
-    parseCurrentRouteHash,
-    replaceHash
+  compileToHash,
+  findCurrentRoute,
+  parseCurrentRouteHash,
+  replaceHash,
 } from '../utils/router.js'
 
 export { router, navigate }

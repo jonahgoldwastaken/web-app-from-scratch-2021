@@ -14,7 +14,7 @@ async function mounted(component) {
   component.state.topTracks = items
 }
 
-async function updated(component) {
+async function updated() {
   const generateButton = document.querySelector('[data-generate]')
   generateButton.addEventListener('click', generateClickHandler)
   const trackInputs = [].slice.call(

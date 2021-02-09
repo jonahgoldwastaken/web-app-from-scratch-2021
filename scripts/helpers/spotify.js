@@ -4,16 +4,16 @@ import { createFetchAuthOptions } from '../utils/fetch.js'
 import { convertMStoS } from '../utils/time.js'
 
 export {
-    saveToken,
-    fetchProfile,
-    fetchAndTemplateParseProfile,
-    fetchTopTracks,
-    fetchRecommendations,
-    getListInfo,
-    createSpotifyPlaylist,
-    trimList,
-    filterOutTracksInList,
-    populateSpotifyPlaylist,
+  saveToken,
+  fetchProfile,
+  fetchAndTemplateParseProfile,
+  fetchTopTracks,
+  fetchRecommendations,
+  getListInfo,
+  createSpotifyPlaylist,
+  trimList,
+  filterOutTracksInList,
+  populateSpotifyPlaylist,
 }
 
 function saveToken(token) {

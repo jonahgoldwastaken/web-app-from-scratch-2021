@@ -1,9 +1,9 @@
 export {
-    fetchData,
-    parseJSON,
-    parseText,
-    createSameOriginUrl,
-    createFetchAuthOptions,
+  fetchData,
+  parseJSON,
+  parseText,
+  createSameOriginUrl,
+  createFetchAuthOptions,
 }
 
 /**

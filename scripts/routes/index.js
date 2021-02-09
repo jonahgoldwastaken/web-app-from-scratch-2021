@@ -1,8 +1,8 @@
 import {
-    CLIENT_ID,
-    LOGIN_URL,
-    REDIRECT_URI,
-    SCOPES
+  CLIENT_ID,
+  LOGIN_URL,
+  REDIRECT_URI,
+  SCOPES,
 } from '../contants/spotify.js'
 import { component } from '../modules/component.js'
 import { fetchAndParseText } from '../modules/fetch.js'
