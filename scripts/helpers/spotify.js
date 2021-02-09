@@ -1,6 +1,7 @@
 import { fetchAndParseJSON } from '../modules/fetch.js'
 import { chunkArray } from '../utils/array.js'
 import { createFetchAuthOptions } from '../utils/fetch.js'
+import { sleep } from '../utils/function.js'
 import { convertMStoS } from '../utils/time.js'
 
 export {
@@ -87,18 +88,16 @@ async function populateSpotifyPlaylist(id, songs) {
 }
 
 async function postSongsToPlaylist(id, songs, i) {
+  if (i > 0) await sleep(400)
   const token = getToken()
-  const newId = await fetchAndParseJSON(
-    `https://api.spotify.com/v1/playlists/${id}/tracks`,
-    {
-      ...createFetchAuthOptions(token, 'POST'),
-      body: JSON.stringify({
-        uris: songs[i].map(song => song.uri),
-      }),
-    }
-  )
+  await fetchAndParseJSON(`https://api.spotify.com/v1/playlists/${id}/tracks`, {
+    ...createFetchAuthOptions(token, 'POST'),
+    body: JSON.stringify({
+      uris: songs[i].map(song => song.uri),
+    }),
+  })
   if (!songs[i + 1]) return true
-  else return postSongsToPlaylist(newId, chunkedSongs, i + 1)
+  else return postSongsToPlaylist(id, songs, i + 1)
 }
 
 function getToken() {

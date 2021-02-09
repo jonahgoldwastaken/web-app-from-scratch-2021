@@ -71,5 +71,6 @@ async function saveListToSpotify(component) {
   const departure = locations[0].adminArea5
   const arrival = locations[1].adminArea5
   const playlist = await createSpotifyPlaylist(departure, arrival)
-  if (await populateSpotifyPlaylist(playlist.id, list)) console.log('gelukt!')
+  if (await populateSpotifyPlaylist(playlist.id, list))
+    console.log(`Gelukt! ${list.length} nummers toegevoegd aan de triplist!`)
 }
