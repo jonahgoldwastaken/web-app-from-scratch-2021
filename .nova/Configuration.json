@@ -1,6 +1,6 @@
 {
   "apexskier.typescript.config.isEnabledForJavascript" : "Enable",
-  "apexskier.typescript.config.organizeImportsOnSave" : "true",
+  "apexskier.typescript.config.organizeImportsOnSave" : "false",
   "editor.default_syntax" : "javascript",
   "prettier.default-config.arrowParens" : "avoid",
   "prettier.default-config.bracketSpacing" : "Enable",
