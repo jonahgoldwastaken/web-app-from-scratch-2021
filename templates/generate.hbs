@@ -2,6 +2,10 @@
   <h1>Generating Triplist...</h1>
 {{/if}}
 
+{{#if list}}
+  <button data-save>Save to playlist</button>
+{{/if}}
+
 {{#unless generating}}
   <h1>Your Triplist</h1>
   {{#each list}}

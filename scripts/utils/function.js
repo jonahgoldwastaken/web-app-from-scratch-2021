@@ -1,4 +1,4 @@
-export { debounce }
+export { debounce, sleep }
 
 /**
  * Debounces passed function
@@ -10,4 +10,8 @@ function debounce(fn, timeout = 1000) {
     clearTimeout(timer)
     timer = setTimeout(() => fn.apply(this, args), timeout)
   }
+}
+
+function sleep(timeout = 500) {
+  return new Promise(resolve => setTimeout(() => resolve(true), timeout))
 }
