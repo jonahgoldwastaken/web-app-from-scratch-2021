@@ -1,9 +1,15 @@
-import { render, compile, update } from '../utils/template.js'
+import { fetchAndParseText } from '../modules/fetch.js'
+import { createSameOriginUrl } from '../utils/fetch.js'
 import { createState } from '../utils/state.js'
+import { compile, render, update } from '../utils/template.js'
 
-export { component }
+export { component, fetchTemplate }
 
-function component(source, initialState = {}, mounted) {
+function component(
+  source,
+  initialState = {},
+  { mounted, updated } = { mounted: null, updated: null }
+) {
   function renderer(rerender) {
     const template = compile(source)
     const state = createState(
@@ -11,8 +17,12 @@ function component(source, initialState = {}, mounted) {
       update.bind(null, rerender, template)
     )
     const firstRender = render(template, state)
-    const component = { state, template: firstRender, mounted }
+    const component = { state, template: firstRender, mounted, updated }
     return component
   }
   return renderer
+}
+
+async function fetchTemplate(name) {
+  return await fetchAndParseText(createSameOriginUrl(`/templates/${name}.hbs`))
 }

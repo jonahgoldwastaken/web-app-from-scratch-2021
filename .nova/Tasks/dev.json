@@ -1,0 +1,10 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "browser-sync -w --port 5000 -s"
+    }
+  },
+  "identifier" : "E7518090-104F-4150-8C96-2100B6DF1A74",
+  "openLogOnRun" : "start"
+}

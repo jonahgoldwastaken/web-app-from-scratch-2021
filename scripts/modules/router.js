@@ -1,10 +1,16 @@
-import { findCurrentRoute, parseCurrentRouteHash } from '../utils/router.js'
+import {
+    compileToHash,
+    findCurrentRoute,
+    parseCurrentRouteHash,
+    replaceHash
+} from '../utils/router.js'
 
-export { router }
+export { router, navigate }
 
 async function router(routes) {
   let hash
   let root
+  let currentComponent
 
   window.addEventListener('hashchange', renderRoute)
   renderRoute()
@@ -15,17 +21,18 @@ async function router(routes) {
       hash = parseCurrentRouteHash()
       const renderComponent = await route.buildComponent()
       const renderedComponent = renderComponent(rerenderRoute.bind(null, hash))
+      currentComponent = renderedComponent
 
       root.innerHTML = renderedComponent.template
 
-      if (renderedComponent.mounted)
-        renderedComponent.mounted(renderedComponent)
+      if (currentComponent.mounted) currentComponent.mounted(currentComponent)
     }
   }
 
   function rerenderRoute(path, template) {
     if (path === hash) {
       root.innerHTML = template
+      if (currentComponent.updated) currentComponent.updated(currentComponent)
     }
   }
 
@@ -33,4 +40,10 @@ async function router(routes) {
     root = element
     renderRoute()
   }
+}
+
+function navigate(destination, replace) {
+  const hash = compileToHash(destination)
+  if (replace) replaceHash(hash)
+  else window.location.hash = hash
 }

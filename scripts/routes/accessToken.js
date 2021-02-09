@@ -1,19 +1,16 @@
-import { createSameOriginUrl } from '../utils/fetch.js'
-import { fetchAndParseText } from '../modules/fetch.js'
-import { component } from '../modules/component.js'
+import { component, fetchTemplate } from '../modules/component.js'
 import { parseAccessToken } from '../modules/hash.js'
+import { navigate } from '../modules/router.js'
 
 export default accessToken
 
 async function accessToken() {
-  const source = await fetchAndParseText(
-    createSameOriginUrl('/templates/redirecting.hbs')
-  )
-  return component(source, {}, mounted)
+  const source = await fetchTemplate('redirecting')
+  return component(source, {}, { mounted })
 }
 
 function mounted() {
   const token = parseAccessToken()
   sessionStorage.setItem('spotify-token', `Bearer ${token}`)
-  window.location.replace(window.location.origin + '/#profile')
+  setTimeout(() => navigate('/route-duration'), 1000)
 }

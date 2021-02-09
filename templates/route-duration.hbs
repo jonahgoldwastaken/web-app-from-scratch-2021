@@ -1,0 +1,16 @@
+<form data-route>
+  <label>
+    Departure
+    <input type="text" name="departure" />
+  </label>
+  <label>
+    Arrival
+    <input type="text" name="arrival" />
+    </label>
+  <button>Calculate route</button>
+</form>
+{{#if route}}
+  <h1>Is this route correct?</h1>
+  <p>From {{route.locations.[0].adminArea5}}, {{route.locations.[0].adminArea1}} to {{route.locations.[1].adminArea5}}, {{route.locations.[1].adminArea1}} with an estimated duration of {{route.formattedTime}} hours.</p>
+  <button data-confirm>Confirm</button>
+{{/if}}

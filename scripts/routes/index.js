@@ -1,12 +1,12 @@
-import { createSameOriginUrl } from '../utils/fetch.js'
-import { fetchAndParseText } from '../modules/fetch.js'
-import { component } from '../modules/component.js'
 import {
-  CLIENT_ID,
-  LOGIN_URL,
-  SCOPES,
-  REDIRECT_URI,
+    CLIENT_ID,
+    LOGIN_URL,
+    REDIRECT_URI,
+    SCOPES
 } from '../contants/spotify.js'
+import { component } from '../modules/component.js'
+import { fetchAndParseText } from '../modules/fetch.js'
+import { createSameOriginUrl } from '../utils/fetch.js'
 
 export default index
 
@@ -14,7 +14,7 @@ async function index() {
   const source = await fetchAndParseText(
     createSameOriginUrl('/templates/index.hbs')
   )
-  return component(source, { what: 'test' }, mounted)
+  return component(source, { what: 'test' }, { mounted })
 }
 
 function mounted() {

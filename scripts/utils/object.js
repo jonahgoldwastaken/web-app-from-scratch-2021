@@ -1,5 +1,6 @@
-export { getValueFromObject }
+export { pickKeyFromObject }
 
-function getValueFromObject(key) {
-  return object => object[key]
+function pickKeyFromObject(key, object) {
+  if (!object) return object => object[key]
+  return object[key]
 }

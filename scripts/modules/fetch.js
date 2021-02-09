@@ -1,6 +1,6 @@
 import { fetchData, parseJSON, parseText } from '../utils/fetch.js'
 
-export { fetchAndParseData, fetchAndParseText }
+export { fetchAndParseJSON, fetchAndParseText }
 
 /**
  * Fetches and parses JSON data
@@ -8,8 +8,9 @@ export { fetchAndParseData, fetchAndParseText }
  * @param {Object} options Fetch options object
  * @returns {Promise} Promise resolving to object
  */
-function fetchAndParseData(url, options) {
-  return fetchData(url, options).then(parseJSON)
+async function fetchAndParseJSON(url, options) {
+  const response = await fetchData(url, options)
+  return parseJSON(response)
 }
 
 /**
@@ -18,6 +19,7 @@ function fetchAndParseData(url, options) {
  * @param {Object} options Fetch options object
  * @returns {Promise} Promise resolving to text
  */
-function fetchAndParseText(url) {
-  return fetchData(url).then(parseText)
+async function fetchAndParseText(url) {
+  const response = await fetchData(url)
+  return parseText(response)
 }

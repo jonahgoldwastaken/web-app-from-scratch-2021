@@ -1,8 +1,9 @@
 import { router } from './modules/router.js'
-import { route } from './utils/route.js'
-import index from './routes/index.js'
 import accessToken from './routes/accessToken.js'
-import profile from './routes/profile.js'
+import generator from './routes/generator.js'
+import index from './routes/index.js'
+import routeDuration from './routes/routeDuration.js'
+import { route } from './utils/route.js'
 
 main()
 
@@ -10,7 +11,8 @@ async function main() {
   const render = await router([
     route('/', index),
     route('/access_token', accessToken),
-    route('/profile', profile),
+    route('/route-duration', routeDuration),
+    route('/generator', generator),
   ])
   render(document.querySelector('#app'))
 }

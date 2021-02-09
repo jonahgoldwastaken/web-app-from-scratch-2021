@@ -1,4 +1,10 @@
-export { fetchData, parseJSON, parseText, createSameOriginUrl }
+export {
+    fetchData,
+    parseJSON,
+    parseText,
+    createSameOriginUrl,
+    createFetchAuthOptions,
+}
 
 /**
  * Fetches a url with the provided options
@@ -35,4 +41,15 @@ function parseText(res) {
  */
 function createSameOriginUrl(path) {
   return `${window.location.origin}${path}`
+}
+
+function createFetchAuthOptions(token, method = 'GET') {
+  return {
+    method,
+    headers: {
+      Authorization: token,
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+  }
 }
