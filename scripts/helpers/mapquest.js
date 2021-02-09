@@ -1,6 +1,5 @@
 import { API_KEY } from '../contants/mapquest.js'
 import { fetchAndParseJSON } from '../modules/fetch.js'
-import { createWritableStore } from '../utils/state.js'
 
 export { fetchRoute }
 
@@ -12,5 +11,3 @@ async function fetchRoute(departure, arrival) {
   )
   return route
 }
-
-export const routeStorage = createWritableStore({})

@@ -1,7 +1,6 @@
 import { fetchAndParseJSON } from '../modules/fetch.js'
 import { chunkArray } from '../utils/array.js'
 import { createFetchAuthOptions } from '../utils/fetch.js'
-import { createWritableStore } from '../utils/state.js'
 import { convertMStoS } from '../utils/time.js'
 
 export {
@@ -120,5 +119,3 @@ function getListInfo(list) {
   )
   return { totalTime }
 }
-
-export const trackStorage = createWritableStore([])

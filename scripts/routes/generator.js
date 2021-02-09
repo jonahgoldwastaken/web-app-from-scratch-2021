@@ -1,17 +1,17 @@
-import { routeStorage } from '../helpers/mapquest.js'
+import { routeStorage } from '../stores/mapquest.js'
 import {
-    createSpotifyPlaylist,
-    fetchRecommendations,
-    filterOutTracksInList,
-    getListInfo,
-    populateSpotifyPlaylist,
-    trackStorage,
-    trimList
+  createSpotifyPlaylist,
+  fetchRecommendations,
+  filterOutTracksInList,
+  getListInfo,
+  populateSpotifyPlaylist,
+  trimList,
 } from '../helpers/spotify.js'
 import {
-    component as createComponent,
-    fetchTemplate
+  component as createComponent,
+  fetchTemplate,
 } from '../modules/component.js'
+import { trackStorage } from '../stores/spotify.js'
 import { sleep } from '../utils/function.js'
 
 export default generator

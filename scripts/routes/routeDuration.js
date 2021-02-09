@@ -1,4 +1,5 @@
-import { fetchRoute, routeStorage } from '../helpers/mapquest.js'
+import { fetchRoute } from '../helpers/mapquest.js'
+import { routeStorage } from '../stores/mapquest.js'
 import { component, fetchTemplate } from '../modules/component.js'
 import { navigate } from '../modules/router.js'
 
