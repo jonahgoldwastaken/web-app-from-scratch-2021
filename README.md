@@ -56,14 +56,14 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 
 - [x] A feature list
 - [x] Log in to Spotify
-- [ ] Search addresses
-- [ ] Get estimated time for a trip
-- [ ] Change time for recommendations
-- [ ] Choose genres from a list
-- [ ] Choose artist from top artists
-- [ ] Choose song from top songs
+- [x] Search addresses
+- [x] Get estimated time for a trip
+- [x] Choose songs from top songs for seeding
+- [x] Save playlist
+- [ ] Change length of trip
 - [ ] Remove songs from recommended playlist
-- [ ] Save playlist
+- [ ] Preview songs
+- [ ] Beautiful design
 
 ## actor diagram
 
