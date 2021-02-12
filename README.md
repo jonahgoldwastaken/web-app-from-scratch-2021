@@ -67,9 +67,11 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 
 ## actor diagram
 
-![Action diagram of app](assets/actor_diagram.png)
+![Action diagram of app](assets/actor_diagram.svg)
 
 ## Interaction diagram
+
+![Interaction diagram of app](assets/interaction_diagram.svg)
 
 ## Design patterns used
 
@@ -78,7 +80,3 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 - Immutability pattern
 - Composition pattern
 - Hash routing
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
