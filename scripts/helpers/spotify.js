@@ -45,11 +45,23 @@ async function fetchProfile() {
  */
 async function fetchTopTracks() {
   const token = getToken()
-  const { items } = await fetchAndParseJSON(
+  const { items: short_term_items } = await fetchAndParseJSON(
     'https://api.spotify.com/v1/me/top/tracks?time_range=short_term',
     createFetchAuthOptions(token)
   )
-  return items
+  if (short_term_items.length) return short_term_items
+
+  const { items: medium_term_items } = await fetchAndParseJSON(
+    'https://api.spotify.com/v1/me/top/tracks?time_range=medium_term',
+    createFetchAuthOptions(token)
+  )
+  if (medium_term_items.length) return medium_term_items
+
+  const { items: long_term_items } = await fetchAndParseJSON(
+    'https://api.spotify.com/v1/me/top/tracks?time_range=long_term',
+    createFetchAuthOptions(token)
+  )
+  if (long_term_items.length) return long_term_items
 }
 
 /**
