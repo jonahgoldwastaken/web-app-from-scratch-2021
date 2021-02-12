@@ -3,7 +3,7 @@ import {
   LOGIN_URL,
   REDIRECT_URI,
   SCOPES,
-} from '../contants/spotify.js'
+} from '../constants/spotify.js'
 import { component } from '../modules/component.js'
 import { fetchAndParseText } from '../modules/fetch.js'
 import { createSameOriginUrl } from '../utils/fetch.js'

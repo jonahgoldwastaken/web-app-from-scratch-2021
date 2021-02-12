@@ -34,7 +34,7 @@ $ browser-sync -w -s --port 5000 # Starts a browser-sync server on port 5000 tha
 
 ## APIs used
 
-The APIs used both have API keys. You can put these inside the contants folder, where all constant values reside.
+The APIs used both have API keys. You can put these inside the constants folder, where all constant values reside.
 
 ### [Spotify Web API](https://developer.spotify.com/documentation/web-api/)
 
