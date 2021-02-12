@@ -1,4 +1,4 @@
-import { LOCATION_URI, ROUTE_URI } from '../contants/bingMaps.js'
+import { ROUTE_URI } from '../contants/bingMaps.js'
 import { fetchAndParseJSON } from '../modules/fetch.js'
 
 export { fetchRoute }
