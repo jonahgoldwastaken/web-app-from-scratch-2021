@@ -1,4 +1,4 @@
-import { routeStorage } from '../stores/mapquest.js'
+import { routeStorage } from '../stores/maps.js'
 import {
   createSpotifyPlaylist,
   fetchRecommendations,
@@ -58,18 +58,15 @@ async function generateList(component, list = []) {
   const newList = [...list, ...filteredTracks]
   const { totalTime } = getListInfo(newList)
 
-  if (totalTime >= component.state.route.time)
-    return trimList(newList, component.state.route.time)
+  if (totalTime >= component.state.route.travelDuration)
+    return trimList(newList, component.state.route.travelDuration)
   return await generateList(component, newList)
 }
 
 async function saveListToSpotify(component) {
-  const {
-    list,
-    route: { locations },
-  } = component.state
-  const departure = locations[0].adminArea5
-  const arrival = locations[1].adminArea5
+  const { list, route } = component.state
+  const departure = route.startLocation.name
+  const arrival = route.endLocation.name
   const playlist = await createSpotifyPlaylist(departure, arrival)
   if (await populateSpotifyPlaylist(playlist.id, list))
     console.log(`Gelukt! ${list.length} nummers toegevoegd aan de triplist!`)

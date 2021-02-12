@@ -1,5 +1,5 @@
-import { fetchRoute } from '../helpers/mapquest.js'
-import { routeStorage } from '../stores/mapquest.js'
+import { fetchRoute } from '../helpers/bingMaps.js'
+import { routeStorage } from '../stores/maps.js'
 import { component, fetchTemplate } from '../modules/component.js'
 import { navigate } from '../modules/router.js'
 
@@ -41,8 +41,6 @@ function updated(component) {
     component.state.route = data
   }
 
-  departureInput.value = `${component.state.route.locations[0].adminArea5}, ${component.state.route.locations[0].adminArea3}`
-  arrivalInput.value = `${component.state.route.locations[1].adminArea5}, ${component.state.route.locations[1].adminArea3}`
   const confirmationButton = document.querySelector('[data-confirm]')
   confirmationButton.addEventListener('click', confirmRoute)
 
