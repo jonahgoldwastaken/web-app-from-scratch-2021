@@ -1,281 +1,143 @@
-<mxfile host="app.diagrams.net" modified="2021-02-08T12:15:35.882Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="ZbiVN7peWmlJPF2HKK4l" version="14.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-12T18:44:48.454Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="OexQKTMI1_Bowu3D8bbQ" version="14.3.1" type="github">
   <diagram id="JOwolYdNJfJyaOSKJtK-" name="Page-1">
-    <mxGraphModel dx="2431" dy="1332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1188" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="Y1716dMgPCCwzFUIhczp-1" value="Actor Diagram" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=24;fontStyle=1;fontFamily=Raleway;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRaleway;" parent="1" vertex="1">
           <mxGeometry x="10" y="10" width="190" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-30" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="40" y="80" width="200" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-20" value="scripts" style="whiteSpace=wrap;html=1;fontSize=28;align=center;fontStyle=1;verticalAlign=top;fillColor=none;" parent="Y1716dMgPCCwzFUIhczp-30" vertex="1">
-          <mxGeometry width="200" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-2" value="main.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fillColor=#000000;fontColor=#FFFFFF;" parent="Y1716dMgPCCwzFUIhczp-30" vertex="1">
+        <mxCell id="Y1716dMgPCCwzFUIhczp-2" value="main" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="40" y="80" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-3" value="&lt;span style=&quot;font-weight: normal; font-size: 12px;&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px;&quot;&gt;main()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" parent="Y1716dMgPCCwzFUIhczp-30" vertex="1">
+        <mxCell id="Y1716dMgPCCwzFUIhczp-3" value="&lt;span style=&quot;font-weight: normal; font-size: 12px;&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px;&quot;&gt;main()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" parent="1" vertex="1">
           <mxGeometry x="40" y="120" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-76" value="helpers" style="whiteSpace=wrap;html=1;fontSize=28;align=center;fontStyle=1;verticalAlign=top;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="440" y="1040" width="440" height="360" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-77" value="spotify.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="480" y="1120" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-78" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;saveToken()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="480" y="1160" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-79" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;fetchUser()&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="480" y="1280" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-80" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;fetchRecommendations()&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="480" y="1320" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-81" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;getToken()&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="480" y="1200" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-82" value="mapquest.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="680" y="1120" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-83" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;fetchDirections()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="680" y="1160" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-87" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;login()&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="480" y="1240" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-88" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;autoCompleteSearch()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="680" y="1200" width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-44" value="modules" style="whiteSpace=wrap;html=1;fontSize=28;align=center;fontStyle=1;verticalAlign=top;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="40" y="720" width="840" height="240" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Y1716dMgPCCwzFUIhczp-47" target="Y1716dMgPCCwzFUIhczp-82" edge="1">
+        <mxCell id="hdE_cUd90ZiWglPtTGae-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-2" target="Y1716dMgPCCwzFUIhczp-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Y1716dMgPCCwzFUIhczp-47" target="Y1716dMgPCCwzFUIhczp-77" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="700" y="830" />
-              <mxPoint x="700" y="1000" />
-              <mxPoint x="560" y="1000" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-2" value="router" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fillColor=#000000;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-47" value="fetch.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="720" y="800" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-48" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;fetchAndParseJSON()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="720" y="840" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-50" value="hash.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="400" y="800" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Y1716dMgPCCwzFUIhczp-50" target="Y1716dMgPCCwzFUIhczp-64" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="390" y="820" />
-              <mxPoint x="390" y="770" />
-              <mxPoint x="220" y="770" />
-              <mxPoint x="220" y="820" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-51" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;parseHash()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="400" y="840" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-52" value="element.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="560" y="800" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-53" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;element()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="560" y="840" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-56" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;fetchAndParseText()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="720" y="880" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-57" value="object.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="240" y="800" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-58" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;pickKeysFromObject()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="240" y="840" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" parent="1" source="Y1716dMgPCCwzFUIhczp-63" target="Y1716dMgPCCwzFUIhczp-3" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="30" y="860" />
-              <mxPoint x="30" y="220" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-63" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;router()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="80" y="840" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-64" value="router.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="80" y="800" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-71" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;changeRoute()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="80" y="880" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-21" value="constants" style="whiteSpace=wrap;html=1;fontSize=28;align=center;fontStyle=1;verticalAlign=top;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="40" y="1040" width="360" height="320" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" parent="1" source="Y1716dMgPCCwzFUIhczp-14" target="Y1716dMgPCCwzFUIhczp-77" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="140" y="1110" />
-              <mxPoint x="560" y="1110" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-14" value="spotify.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="80" y="1120" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-15" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;SCOPES&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="80" y="1160" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-16" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;REDIRECT_URI&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="80" y="1200" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-22" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;CLIENT_ID&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="80" y="1240" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-23" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;LOGIN_URL&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="80" y="1280" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" parent="1" source="Y1716dMgPCCwzFUIhczp-24" target="Y1716dMgPCCwzFUIhczp-82" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="300" y="1100" />
-              <mxPoint x="760" y="1100" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-24" value="mapquest.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="240" y="1120" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-25" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;API_KEY&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="240" y="1160" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-32" value="utils" style="whiteSpace=wrap;html=1;fontSize=28;align=center;fontStyle=1;verticalAlign=top;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="40" y="360" width="1320" height="280" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-4" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;render()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="400" y="480" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" parent="1" source="Y1716dMgPCCwzFUIhczp-5" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="560" y="820" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="540" y="460" />
-              <mxPoint x="540" y="820" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-5" value="template.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="400" y="440" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" parent="1" source="Y1716dMgPCCwzFUIhczp-7" target="Y1716dMgPCCwzFUIhczp-64" edge="1">
+        <mxCell id="hdE_cUd90ZiWglPtTGae-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-3" target="hdE_cUd90ZiWglPtTGae-16">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-7" value="router.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="80" y="440" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-9" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;route()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="80" y="480" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" parent="1" source="Y1716dMgPCCwzFUIhczp-33" target="Y1716dMgPCCwzFUIhczp-47" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1020" y="460" />
-              <mxPoint x="1020" y="820" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-33" value="fetch.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="1040" y="440" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-34" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;fetchURL()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="1040" y="480" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-35" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;parseJSON()&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="1040" y="520" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" parent="1" source="Y1716dMgPCCwzFUIhczp-38" target="Y1716dMgPCCwzFUIhczp-57" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="370" y="460" />
-              <mxPoint x="370" y="820" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-38" value="object.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="240" y="440" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-39" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;pickKeyFromObject()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="240" y="480" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" parent="1" source="Y1716dMgPCCwzFUIhczp-41" target="Y1716dMgPCCwzFUIhczp-77" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1180" y="460" />
-              <mxPoint x="1180" y="1000" />
-              <mxPoint x="560" y="1000" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-41" value="time.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="440" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-42" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;convertMSToS()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="1200" y="480" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-45" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;compile()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="400" y="520" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-55" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;parseText()&lt;br&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="1040" y="560" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" parent="1" source="Y1716dMgPCCwzFUIhczp-59" target="Y1716dMgPCCwzFUIhczp-52" edge="1">
+        <mxCell id="hdE_cUd90ZiWglPtTGae-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-3" target="hdE_cUd90ZiWglPtTGae-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-59" value="state.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fillColor=#000000;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="560" y="440" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-60" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;createState()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="560" y="480" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-70" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;findRoute()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="80" y="520" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Y1716dMgPCCwzFUIhczp-113" target="Y1716dMgPCCwzFUIhczp-88" edge="1">
+        <mxCell id="hdE_cUd90ZiWglPtTGae-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-3" target="hdE_cUd90ZiWglPtTGae-18">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-113" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;debounce()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="880" y="480" width="120" height="40" as="geometry" />
+        <mxCell id="hdE_cUd90ZiWglPtTGae-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-3" target="hdE_cUd90ZiWglPtTGae-19">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Y1716dMgPCCwzFUIhczp-114" value="function.js" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="880" y="440" width="120" height="40" as="geometry" />
+        <mxCell id="hdE_cUd90ZiWglPtTGae-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-3" target="hdE_cUd90ZiWglPtTGae-20">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="g5hwUZwlWaMCr0O9z2gW-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=28;fontColor=#000000;" edge="1" parent="1" source="g5hwUZwlWaMCr0O9z2gW-1" target="Y1716dMgPCCwzFUIhczp-77">
+        <mxCell id="hdE_cUd90ZiWglPtTGae-3" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;render()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-4" target="hdE_cUd90ZiWglPtTGae-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-4" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;rerender()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-5" value="spotify" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="720" y="80" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-6" value="bingMaps" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="560" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-7" value="routes" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-8" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;getToken()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="160" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-9" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;saveToken()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="120" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-10" target="hdE_cUd90ZiWglPtTGae-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-10" target="hdE_cUd90ZiWglPtTGae-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-10" target="hdE_cUd90ZiWglPtTGae-20">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="840" y="690" />
-              <mxPoint x="1180" y="690" />
-              <mxPoint x="1180" y="1000" />
-              <mxPoint x="560" y="1000" />
+              <mxPoint x="890" y="220" />
+              <mxPoint x="890" y="370" />
+              <mxPoint x="710" y="370" />
+              <mxPoint x="710" y="350" />
+              <mxPoint x="610" y="350" />
+              <mxPoint x="610" y="310" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="g5hwUZwlWaMCr0O9z2gW-1" value="storage" style="whiteSpace=wrap;html=1;fontSize=20;align=center;fontStyle=1;fontColor=#FFFFFF;fillColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="720" y="440" width="120" height="40" as="geometry" />
+        <mxCell id="hdE_cUd90ZiWglPtTGae-10" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;fetchProfile()&lt;br&gt;&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="200" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="g5hwUZwlWaMCr0O9z2gW-2" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;getStorageItem()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="720" y="480" width="120" height="40" as="geometry" />
+        <mxCell id="hdE_cUd90ZiWglPtTGae-11" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;fetchTopTracks()&lt;br&gt;&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="240" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="g5hwUZwlWaMCr0O9z2gW-3" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;setStorageItem()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="720" y="520" width="120" height="40" as="geometry" />
+        <mxCell id="hdE_cUd90ZiWglPtTGae-12" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;fetchRecommendations()&lt;br&gt;&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="280" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-13" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;saveToPlaylist()&lt;br&gt;&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="320" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-14" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;fetchTrip()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-15" target="hdE_cUd90ZiWglPtTGae-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-15" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;navigate()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-16" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;index()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-17" target="hdE_cUd90ZiWglPtTGae-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="180" />
+              <mxPoint x="540" y="70" />
+              <mxPoint x="700" y="70" />
+              <mxPoint x="700" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-17" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;access_token()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="160" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-18" target="hdE_cUd90ZiWglPtTGae-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="220" />
+              <mxPoint x="550" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-18" value="&lt;span style=&quot;font-weight: normal ; font-size: 12px&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inconsolata&quot; face=&quot;Inconsolata&quot; style=&quot;font-size: 12px&quot;&gt;tripDuration()&lt;/font&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="200" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-19" target="hdE_cUd90ZiWglPtTGae-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-19" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;listFavouriteTracks()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="240" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-20" target="hdE_cUd90ZiWglPtTGae-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="hdE_cUd90ZiWglPtTGae-20" target="hdE_cUd90ZiWglPtTGae-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hdE_cUd90ZiWglPtTGae-20" value="&lt;font face=&quot;Inconsolata&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;generate()&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=12;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="280" width="160" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
