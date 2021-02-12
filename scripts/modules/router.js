@@ -7,6 +7,11 @@ import {
 
 export { router, navigate }
 
+/**
+ * Creates a router that switches between supplied routes
+ * @param {array} routes Array of route functions
+ * @returns {Function} Function to render to the DOM
+ */
 async function router(routes) {
   let hash
   let root

@@ -10,6 +10,9 @@ import { createSameOriginUrl } from '../utils/fetch.js'
 
 export default index
 
+/**
+ * Index route
+ */
 async function index() {
   const source = await fetchAndParseText(
     createSameOriginUrl('/templates/index.hbs')

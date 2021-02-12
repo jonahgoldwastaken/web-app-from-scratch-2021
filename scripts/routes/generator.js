@@ -1,4 +1,4 @@
-import { routeStorage } from '../stores/maps.js'
+import { tripStorage } from '../stores/maps.js'
 import {
   createSpotifyPlaylist,
   fetchRecommendations,
@@ -16,6 +16,9 @@ import { sleep } from '../utils/function.js'
 
 export default generator
 
+/**
+ * Generator route
+ */
 async function generator() {
   const source = await fetchTemplate('generate')
   return createComponent(
@@ -32,7 +35,7 @@ async function generator() {
 
 async function mounted(component) {
   trackStorage.subscribe(val => (component.state.topTracks = val))
-  routeStorage.subscribe(val => (component.state.route = val))
+  tripStorage.subscribe(val => (component.state.route = val))
 }
 
 async function updated(component) {

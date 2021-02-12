@@ -11,8 +11,8 @@ async function favouritesList() {
 }
 
 async function mounted(component) {
-  const { items } = await fetchTopTracks()
-  component.state.topTracks = items
+  const tracks = await fetchTopTracks()
+  component.state.topTracks = tracks
 }
 
 async function updated() {

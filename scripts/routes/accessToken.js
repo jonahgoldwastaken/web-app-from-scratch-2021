@@ -4,6 +4,9 @@ import { navigate } from '../modules/router.js'
 
 export default accessToken
 
+/**
+ * Access Token Route
+ */
 async function accessToken() {
   const source = await fetchTemplate('redirecting')
   return component(source, {}, { mounted })
@@ -12,5 +15,5 @@ async function accessToken() {
 function mounted() {
   const token = parseAccessToken()
   sessionStorage.setItem('spotify-token', `Bearer ${token}`)
-  setTimeout(() => navigate('/route-duration'), 1000)
+  setTimeout(() => navigate('/trip-duration'), 1000)
 }

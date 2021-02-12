@@ -3,6 +3,11 @@ import { fetchAndParseJSON } from '../modules/fetch.js'
 
 export { fetchRoute }
 
+/**
+ * Calculates the route for the provided locations
+ * @param  {...string} locations Location strings to include in the route
+ * @returns {object} The first and only leg of the calculated route
+ */
 async function fetchRoute(...locations) {
   const { resourceSets } = await fetchAndParseJSON(
     `${ROUTE_URI}${locations.map((l, i) =>

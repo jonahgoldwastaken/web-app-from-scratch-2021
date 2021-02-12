@@ -43,6 +43,12 @@ function createSameOriginUrl(path) {
   return `${window.location.origin}${path}`
 }
 
+/**
+ * Creates a standardised fetch options object
+ * @param {string} token Auth token
+ * @param {string} method HTTP method
+ * @returns {object} fetch options object
+ */
 function createFetchAuthOptions(token, method = 'GET') {
   return {
     method,

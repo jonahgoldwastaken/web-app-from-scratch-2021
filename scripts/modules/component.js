@@ -5,6 +5,13 @@ import { compile, render, update } from '../utils/template.js'
 
 export { component, fetchTemplate }
 
+/**
+ * Creates a reactive Handlebars component
+ * @param {string} source Handlebars string
+ * @param {object} initialState Initial state object
+ * @param {object} lifeCycleFunctions Objects containing lifecycle functions `mounted` & `updated`
+ * @returns {Function} Function to return to a `route` function
+ */
 function component(
   source,
   initialState = {},
@@ -23,6 +30,11 @@ function component(
   return renderer
 }
 
+/**
+ * Fetches template from the template folder
+ * @param {string} name Template name
+ * @returns {Promise} Promise resolving to Handlebars template string
+ */
 async function fetchTemplate(name) {
   return await fetchAndParseText(createSameOriginUrl(`/templates/${name}.hbs`))
 }

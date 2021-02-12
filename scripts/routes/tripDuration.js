@@ -1,12 +1,15 @@
 import { fetchRoute } from '../helpers/bingMaps.js'
-import { routeStorage } from '../stores/maps.js'
+import { tripStorage } from '../stores/maps.js'
 import { component, fetchTemplate } from '../modules/component.js'
 import { navigate } from '../modules/router.js'
 
-export default routeDuration
+export default tripDuration
 
-async function routeDuration() {
-  const source = await fetchTemplate('route-duration')
+/**
+ * Trip Duration route
+ */
+async function tripDuration() {
+  const source = await fetchTemplate('trip-duration')
   return component(source, { route: null }, { updated, mounted })
 }
 
@@ -45,7 +48,7 @@ function updated(component) {
   confirmationButton.addEventListener('click', confirmRoute)
 
   function confirmRoute() {
-    routeStorage.set(component.state.route)
+    tripStorage.set(component.state.route)
     navigate('/list-favourites')
   }
 }
