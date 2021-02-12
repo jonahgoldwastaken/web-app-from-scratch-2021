@@ -67,11 +67,11 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 
 ## actor diagram
 
-![Action diagram of app](assets/actor_diagram.svg)
+![Action diagram of app](assets/actor_diagram.png)
 
 ## Interaction diagram
 
-![Interaction diagram of app](assets/interaction_diagram.svg)
+![Interaction diagram of app](assets/interaction_diagram.png)
 
 ## Design patterns used
 
