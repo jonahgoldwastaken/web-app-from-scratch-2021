@@ -1,3 +1,3 @@
 import { createWritableStore } from '../utils/state.js'
 
-export const tripStorage = createWritableStore({})
+export const tripStorage = createWritableStore(null)

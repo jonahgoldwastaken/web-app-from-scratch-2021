@@ -12,7 +12,7 @@ export { router, navigate }
  * @param {array} routes Array of route functions
  * @returns {Function} Function to render to the DOM
  */
-async function router(routes) {
+function router(routes) {
   let hash
   let root
   let currentComponent
@@ -23,6 +23,12 @@ async function router(routes) {
   async function renderRoute() {
     const route = findCurrentRoute(routes)
     if (route) {
+      if (route.authMiddleware) {
+        if (!route.authMiddleware()) {
+          navigate('/')
+          return
+        }
+      }
       hash = parseCurrentRouteHash()
       const renderComponent = await route.buildComponent()
       const renderedComponent = renderComponent(rerenderRoute.bind(null, hash))
@@ -31,7 +37,7 @@ async function router(routes) {
       root.innerHTML = renderedComponent.template
 
       if (currentComponent.mounted) currentComponent.mounted(currentComponent)
-    }
+    } else navigate('/')
   }
 
   function rerenderRoute(path, template) {

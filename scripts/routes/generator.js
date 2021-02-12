@@ -13,6 +13,7 @@ import {
 } from '../modules/component.js'
 import { trackStorage } from '../stores/spotify.js'
 import { sleep } from '../utils/function.js'
+import { navigate } from '../modules/router.js'
 
 export default generator
 
@@ -34,8 +35,14 @@ async function generator() {
 }
 
 async function mounted(component) {
-  trackStorage.subscribe(val => (component.state.topTracks = val))
-  tripStorage.subscribe(val => (component.state.route = val))
+  tripStorage.subscribe(val => {
+    if (!val) navigate('/trip-duration')
+    else component.state.route = val
+  })
+  trackStorage.subscribe(val => {
+    if (!val) navigate('/trip-duration')
+    else component.state.topTracks = val
+  })
 }
 
 async function updated(component) {
