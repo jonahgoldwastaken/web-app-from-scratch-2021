@@ -9,6 +9,7 @@ A web app built from scratch giving you a Spotify playlist that is the perfect l
 ## Index
 
 - [Getting started](#getting-started)
+- [Folder structure](#folder-structure)
 - [APIs used](#apis-used)
 - [Features](#features)
 - [User Interaction Flow](#user-interaction-flow)
@@ -31,6 +32,22 @@ $ git clone https://github.com/theonejonahgold/web-app-from-scratch-2021 web-app
 $ cd web-app
 $ browser-sync -w -s --port 5000 # Starts a browser-sync server on port 5000 that watches for file changes in the current directory
 ```
+
+## Folder structure
+
+- **scripts**: Where all JavaScript goes
+  - **constants**: Constant values, like API URIs and keys.
+  - **helpers**: Functions used in specific use cases, like the Spotify or Bing Maps API.
+  - **modules**: Function compisitions applicable in multiple projects. They're separated over files named after their main concern, e.g. objects.
+  - **routes**: Route functions used in this app.
+  - **stores**: Stores created for this app.
+  - **utils**: Single-purpose functions that can be used on their own or combined. They're separated over files named after their main concern.
+  - **main.js**: The start of the application
+- **styles**: Where all CSS goes
+  - main.css: Where all the styling comes together.
+- **templates**: Where all Handlebars templates live.
+- **assets**: For images and other types of media assets.
+- **index.html**: The entrypoint for the application.
 
 ## APIs used
 
@@ -77,6 +94,5 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 
 - Pure functional pattern
 - PubSub pattern
-- Immutability pattern
 - Composition pattern
 - Hash routing
