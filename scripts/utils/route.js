@@ -11,8 +11,8 @@ function route(path, page, authMiddleware) {
   return {
     path,
     authMiddleware,
-    buildComponent: async updateFunc => {
-      const component = await page(updateFunc)
+    buildComponent: async () => {
+      const component = await page()
       return component
     },
   }

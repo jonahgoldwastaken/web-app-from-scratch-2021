@@ -1,16 +1,27 @@
-<form data-route>
-  <label>
-    Departure
-    <input type="text" name="departure" />
-  </label>
-  <label>
-    Arrival
-    <input type="text" name="arrival" />
-    </label>
-  <button>Calculate route</button>
-</form>
+<h1>Where is the trip headed?</h1>
+<main>
+  {{#if route}}
+    <h2>Trip details</h2>
+    <ul class="details-overview">
+      <li><span>From</span> {{cityName route.startLocation}}</li>
+      <li><span>To</span> {{cityName route.endLocation}}</li>
+      <li><span>Duration</span> {{timeFormatter route.travelDuration}} hours</li>
+      <li><span>Distance</span> {{distanceFormatter route.travelDistance}} km</li>
+    </ul>
+    <button data-confirm>Confirm</button>
+  {{/if}}
 {{#if route}}
-  <h1>Is this route correct?</h1>
-  <p>From {{route.startLocation.name}} to {{route.endLocation.name}} with an estimated duration of {{timeFormatter route.travelDuration}}.</p>
-  <button data-confirm>Confirm</button>
+<h2>Edit trip</h2>
 {{/if}}
+  <form data-route>
+    <label>
+      From
+      <input type="text" name="departure" placeholder="Amsterdam" />
+    </label>
+    <label>
+      To
+      <input type="text" name="arrival" placeholder="Budapest" />
+      </label>
+    <button>Search</button>
+  </form>
+</main>

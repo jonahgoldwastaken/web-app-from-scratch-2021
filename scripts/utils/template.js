@@ -1,11 +1,37 @@
-import handlebars from 'https://cdn.skypack.dev/handlebars'
+import handlebars from 'https://cdn.skypack.dev/handlebars@^4.7.7'
+import { getListInfo } from '../helpers/spotify.js'
 
 export { render, compile, update }
 
 handlebars.registerHelper('timeFormatter', function (seconds) {
   const hours = Math.floor(seconds / 3600)
   const minutes = Math.floor((seconds % 3600) / 60)
-  return `${hours}:${minutes < 10 ? `0${minutes}` : minutes} hours`
+  return `${hours}:${minutes < 10 ? `0${minutes}` : minutes}`
+})
+
+handlebars.registerHelper('cityName', function (location) {
+  return (
+    location.address.adminDistrict2 ||
+    location.address.adminDistrict ||
+    location.name
+  )
+})
+
+handlebars.registerHelper('distanceFormatter', function (distance) {
+  return Number(distance).toFixed(2)
+})
+
+handlebars.registerHelper('durationFormatter', function (list) {
+  if (!list.length) return '00:00:00'
+  const seconds = getListInfo(list).totalTime
+  const hours = Math.floor(seconds / 3600)
+  const minutes = Math.floor((seconds - hours * 3600) / 60)
+  const parsedSeconds = Math.floor(seconds - hours * 3600 - minutes * 60)
+  return `${hours}:${minutes < 10 ? `0${minutes}` : minutes}:${parsedSeconds < 10 ? `0${parsedSeconds}` : parsedSeconds}`
+})
+
+handlebars.registerHelper('progress', function (list, route) {
+  return (getListInfo(list).totalTime / route.travelDuration) * 100
 })
 
 /**

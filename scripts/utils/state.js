@@ -43,7 +43,7 @@ function createReadableStore(initialValue, func) {
  */
 function createWritableStore(initialValue, func) {
   let _store = initialValue
-  const subscribers = []
+  let subscribers = []
 
   if (func) func(set)
 

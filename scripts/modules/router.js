@@ -23,11 +23,9 @@ function router(routes) {
   async function renderRoute() {
     const route = findCurrentRoute(routes)
     if (route) {
-      if (route.authMiddleware) {
-        if (!route.authMiddleware()) {
-          navigate('/')
-          return
-        }
+      if (route.authMiddleware && !route.authMiddleware()) {
+        navigate('/')
+        return
       }
       hash = parseCurrentRouteHash()
       const renderComponent = await route.buildComponent()
@@ -35,6 +33,7 @@ function router(routes) {
       currentComponent = renderedComponent
 
       root.innerHTML = renderedComponent.template
+      root.className = hash
 
       if (currentComponent.mounted) currentComponent.mounted(currentComponent)
     } else navigate('/')

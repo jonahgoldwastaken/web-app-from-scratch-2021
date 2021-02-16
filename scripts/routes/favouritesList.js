@@ -19,7 +19,7 @@ async function updated() {
   const generateButton = document.querySelector('[data-generate]')
   generateButton.addEventListener('click', generateClickHandler)
   const trackInputs = [].slice.call(
-    document.querySelectorAll('#tracks [name="favourites"]')
+    document.querySelectorAll('#tracks-grid [name="favourites"]')
   )
   trackInputs.forEach(input =>
     input.addEventListener('change', inputChangeHandler)
@@ -27,7 +27,7 @@ async function updated() {
 
   function generateClickHandler() {
     const selectedTrackInputs = [].slice.call(
-      document.querySelectorAll('#tracks [name="favourites"]:checked')
+      document.querySelectorAll('#tracks-grid [name="favourites"]:checked')
     )
 
     const trackIds = selectedTrackInputs.map(input => input.value)
@@ -39,10 +39,12 @@ async function updated() {
 
   function inputChangeHandler() {
     const selectedTrackInputs = [].slice.call(
-      document.querySelectorAll('#tracks [name="favourites"]:checked')
+      document.querySelectorAll('#tracks-grid [name="favourites"]:checked')
     )
-    if (selectedTrackInputs.length > 5) {
-      this.checked = false
-    }
+    if (selectedTrackInputs.length > 5) this.checked = false
+
+    const generateButton = document.querySelector('[data-generate]')
+    if (generateButton)
+      generateButton.disabled = selectedTrackInputs.length ? false : true
   }
 }

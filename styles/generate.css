@@ -1,0 +1,93 @@
+[class='/generate'] .generating {
+  margin: 0;
+  background: var(--background);
+  height: 100vh;
+  text-align: center;
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  place-items: center;
+}
+
+[class='/generate'] .generating h1 {
+  margin-top: var(--base-margin);
+}
+
+[class='/generate'] .generating strong {
+  display: block;
+  font-size: var(--step-5);
+  font-weight: bold;
+}
+
+[class='/generate'] .generating p {
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column-reverse;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: var(--step-1);
+}
+
+[class='/generate'] .generating > :last-child {
+  display: grid;
+  max-width: 40rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 'from to' 'progress progress' 'start end';
+  margin-bottom: var(--double-margin);
+}
+
+[class='/generate'] .generating > :last-child p {
+  margin: 0;
+}
+
+[class='/generate'] .generating > :last-child p:nth-child(-n + 2) {
+  font-weight: 500;
+}
+
+[class='/generate'] .generating > :last-child p:first-child {
+  text-align: left;
+  grid-area: from;
+}
+
+[class='/generate'] .generating > :last-child p:nth-child(2) {
+  text-align: right;
+  grid-area: to;
+}
+
+[class='/generate'] .generating > :last-child progress {
+  grid-area: progress;
+}
+
+[class='/generate'] .generating > :last-child p:nth-last-child(2) {
+  text-align: left;
+  grid-area: start;
+}
+
+[class='/generate'] .generating > :last-child p:last-child {
+  text-align: right;
+  grid-area: end;
+}
+
+[class='/generate'] h1,
+[class='/generate'] > div:nth-child(2) {
+  background: var(--orange);
+}
+
+[class='/generate'] h1 {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  padding-bottom: var(--half-margin);
+}
+
+[class='/generate'] .details-overview {
+  max-width: 40rem;
+  width: min-content;
+  margin: 0 auto;
+}
+
+[class='/generate'] main:not(.generating) {
+  margin-top: var(--base-margin);
+  height: 100%;
+}

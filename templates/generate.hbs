@@ -1,14 +1,53 @@
 {{#if generating}}
-  <h1>Generating Triplist...</h1>
-{{/if}}
-
-{{#if list}}
-  <button data-save>Save to playlist</button>
+  <main class="generating">
+    <h1>Generating</h1>
+    <div>
+      <p>Duration<strong>{{durationFormatter list}}</strong></p>
+      <p>Songs<strong>{{list.length}}</strong></p>
+    </div>
+    {{#if route}}
+      <div>
+        <p>{{cityName route.startLocation}}</p>
+        <p>{{cityName route.endLocation}}</p>
+        <progress max="100" value="{{progress list route}}">{{progress list route}}%</progress>
+        <p>00:00</p>
+        <p>{{timeFormatter route.travelDuration}}</p>
+      </div>
+    {{/if}}
+  </main>
 {{/if}}
 
 {{#unless generating}}
-  <h1>Your Triptoplist</h1>
-  {{#each list}}
-    <p>{{this.name}}</p>
-  {{/each}}
+  <h1>Your Triptop list</h1>
+  <div>
+    <ul class='details-overview details-overview-light'>
+      <li><span>From</span>{{cityName route.startLocation}}</li>
+      <li><span>To</span>{{cityName route.endLocation}}</li>
+      <li><span>Duration</span>{{durationFormatter list}}</li>
+      <li><span>Songs</span>{{list.length}}</li>
+    </ul>
+  </div>
+  <main>
+    {{#if saving}}
+      <button disabled class="fixed-button sticky-button">
+        Saving...
+      </button>
+    {{/if}}
+    {{#unless saving}}
+      <button class="fixed-button sticky-button" data-save>
+        Save to playlist
+      </button>
+    {{/unless}}
+    <ul id="tracks-list">
+      {{#each list as |track|}}
+      <li>
+        <img src="{{track.album.images.0.url}}" alt='Album cover for {{track.album.name}}'>
+        <div>
+          <span>{{track.name}}</span>
+          <span>{{track.artists.0.name}} - {{track.album.name}}</span>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </main>
 {{/unless}}

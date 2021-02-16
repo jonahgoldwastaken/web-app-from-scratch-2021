@@ -1,12 +1,15 @@
-<h1>Choose your favourites!</h1>
-<button data-generate>Generate list</button>
-<ul id="tracks">
+<hgroup>
+  <h1>Choose your favourite tracks</h1>
+  <h2>Select between 1 and 5 tracks</h2>
+</hgroup>
+<button class="fixed-button sticky-button" disabled data-generate>Generate list</button>
+<ul id="tracks-grid">
 {{#each topTracks as |track|}}
   <li>
     <label>
       <img src='{{track.album.images.0.url}}' alt='Album cover for {{track.album.name}}'>
-      {{track.name}} van {{track.artists.0.name}}
-      <input type='checkbox' value={{track.id}} name='favourites'>
+      <span>{{track.name}} <input type='checkbox' value={{track.id}} name='favourites'></span>
+      <span>{{track.artists.0.name}} - {{track.album.name}}</span>
     </label>
   </li>
 {{/each}}

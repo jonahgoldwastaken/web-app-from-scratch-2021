@@ -1,0 +1,61 @@
+[class='/trip-duration'] h1 {
+  padding: var(--step-1);
+  width: 70vw;
+  position: relative;
+}
+
+[class='/trip-duration'] h1:before {
+  content: '';
+  width: 100vw;
+  height: 70vw;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+      circle at center,
+      var(--orange),
+      var(--orange) 40%,
+      transparent 40%
+    )
+    no-repeat;
+  background-size: 200% 200%;
+  background-position: 70% 120%;
+}
+
+@media screen and (min-width: 60rem) {
+  [class='/trip-duration'] h1:before {
+    background-position: 80% 140%;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  [class='/trip-duration'] h1:before {
+    background-position: 65% 130%;
+  }
+}
+
+@media screen and (min-width: 100rem) {
+  [class='/trip-duration'] h1:before {
+    background-position: 70% 140%;
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  [class='/trip-duration'] h1:before {
+    background-position: 75% 150%;
+  }
+}
+
+@media screen and (min-width: 160rem) {
+  [class='/trip-duration'] h1:before {
+    background-position: 81% 158%;
+  }
+}
+
+[class='/trip-duration'] main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

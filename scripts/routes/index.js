@@ -4,9 +4,7 @@ import {
   REDIRECT_URI,
   SCOPES,
 } from '../constants/spotify.js'
-import { component } from '../modules/component.js'
-import { fetchAndParseText } from '../modules/fetch.js'
-import { createSameOriginUrl } from '../utils/fetch.js'
+import { component, fetchTemplate } from '../modules/component.js'
 
 export default index
 
@@ -14,17 +12,13 @@ export default index
  * Index route
  */
 async function index() {
-  const source = await fetchAndParseText(
-    createSameOriginUrl('/templates/index.hbs')
-  )
-  return component(source, { what: 'test' }, { mounted })
+  const source = await fetchTemplate('index')
+  return component(source, null, { mounted })
 }
 
 function mounted() {
   const loginButton = document.querySelector('[data-login]')
-  if (loginButton) {
-    loginButton.addEventListener('click', loginButtonHandler)
-  }
+  if (loginButton) loginButton.addEventListener('click', loginButtonHandler)
 }
 
 /**

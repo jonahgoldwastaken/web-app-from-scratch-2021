@@ -11,7 +11,7 @@ import {
   component as createComponent,
   fetchTemplate,
 } from '../modules/component.js'
-import { trackStorage } from '../stores/spotify.js'
+import { trackStorage, playlistStorage } from '../stores/spotify.js'
 import { sleep } from '../utils/function.js'
 import { navigate } from '../modules/router.js'
 
@@ -26,9 +26,10 @@ async function generator() {
     source,
     {
       generating: true,
-      list: null,
+      list: [],
       topTracks: null,
       route: null,
+      saving: false,
     },
     { mounted, updated }
   )
@@ -38,46 +39,64 @@ async function mounted(component) {
   tripStorage.subscribe(val => {
     if (!val) navigate('/trip-duration')
     else component.state.route = val
-  })
+  })()
   trackStorage.subscribe(val => {
     if (!val) navigate('/trip-duration')
     else component.state.topTracks = val
-  })
+  })()
 }
 
 async function updated(component) {
   if (component.state.topTracks && component.state.route) {
-    if (!component.state.list) {
-      component.state.list = await generateList(component)
+    if (!component.state.list.length) {
+      for await (const list of generateList(
+        component.state.route,
+        component.state.topTracks
+      )) {
+        component.state.list = list
+      }
       component.state.generating = false
       return
     }
-    const saveButton = document.querySelector('[data-save]')
-    saveButton.addEventListener(
-      'click',
-      saveListToSpotify.bind(null, component),
-      true
-    )
+    if (!component.state.generating && !component.state.saving) {
+      const saveButton = document.querySelector('[data-save]')
+      saveButton.addEventListener(
+        'click',
+        () => {
+          component.state.saving = true
+          saveListToSpotify(component)
+        },
+        true
+      )
+    }
   }
 }
 
-async function generateList(component, list = []) {
-  if (list.length) await sleep(400)
-  const freshTracks = await fetchRecommendations(component.state.topTracks)
-  const filteredTracks = freshTracks.filter(filterOutTracksInList(list))
-  const newList = [...list, ...filteredTracks]
-  const { totalTime } = getListInfo(newList)
-
-  if (totalTime >= component.state.route.travelDuration)
-    return trimList(newList, component.state.route.travelDuration)
-  return await generateList(component, newList)
+async function* generateList(route, tracks) {
+  let list = []
+  while (getListInfo(list).totalTime < route.travelDuration) {
+    await sleep(400)
+    const freshTracks = await fetchRecommendations(tracks)
+    const filteredTracks = freshTracks.filter(filterOutTracksInList(list))
+    list = [...list, ...filteredTracks]
+    yield list
+  }
+  return trimList(list, route.travelDuration)
 }
 
 async function saveListToSpotify(component) {
   const { list, route } = component.state
-  const departure = route.startLocation.name
-  const arrival = route.endLocation.name
+  const departure =
+    route.startLocation.address.adminDistrict2 ||
+    route.startLocation.address.adminDistrict ||
+    route.startLocation.name
+  const arrival =
+    route.endLocation.address.adminDistrict2 ||
+    route.endLocation.address.adminDistrict ||
+    route.endLocation.name
   const playlist = await createSpotifyPlaylist(departure, arrival)
-  if (await populateSpotifyPlaylist(playlist.id, list))
-    console.log(`Gelukt! ${list.length} nummers toegevoegd aan de triplist!`)
+  if (await populateSpotifyPlaylist(playlist.id, list)) {
+    playlistStorage.set(playlist)
+    navigate('/result')
+  }
 }
