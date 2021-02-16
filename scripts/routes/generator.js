@@ -103,11 +103,11 @@ async function updated(component) {
   }
 }
 
-async function* generateList(route, tracks) {
+async function* generateList(route, topTracks) {
   let list = []
   while (getListInfo(list).totalTime < route.travelDuration) {
     await sleep(400)
-    const newTracks = await fetchRecommendations(tracks)
+    const newTracks = await fetchRecommendations(topTracks)
     const filteredTracks = newTracks.filter(filterOutTracksInList(list))
     list = [...list, ...filteredTracks]
     yield list
