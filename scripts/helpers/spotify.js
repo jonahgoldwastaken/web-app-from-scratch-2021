@@ -82,10 +82,10 @@ async function fetchAndTemplateParseProfile() {
  * @param {array} ids Array of Spotify Track IDs to use with recommendation fetching
  * @returns {object} Tracks
  */
-async function fetchRecommendations(ids) {
+async function fetchRecommendations(ids, limit = 20) {
   const token = getToken()
   const { tracks } = await fetchAndParseJSON(
-    `https://api.spotify.com/v1/recommendations?limit=20&seed_tracks=${ids.join(
+    `https://api.spotify.com/v1/recommendations?limit=${limit}&seed_tracks=${ids.join(
       ','
     )}`,
     createFetchAuthOptions(token)

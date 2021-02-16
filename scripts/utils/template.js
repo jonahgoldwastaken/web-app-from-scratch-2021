@@ -34,6 +34,9 @@ handlebars.registerHelper('progress', function (list, route) {
   return (getListInfo(list).totalTime / route.travelDuration) * 100
 })
 
+handlebars.registerHelper('validUrl', function (string) {
+  return string && (string.includes('http://') || string.includes('https://'))
+})
 /**
  * Renders provided template with provided state values
  * @param {Function} template Template to render

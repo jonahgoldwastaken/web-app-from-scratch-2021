@@ -1,3 +1,4 @@
+import { navigate } from '../modules/router.js'
 import { component, fetchTemplate } from '../modules/component.js'
 import { fetchSpotifyPlaylist } from '../helpers/spotify.js'
 import { playlistStorage } from '../stores/spotify.js'
@@ -10,13 +11,22 @@ async function result() {
 }
 
 function mounted(component) {
+  let hasPlaylist = true
   playlistStorage.subscribe(value => {
-    if (!value?.images.length)
-      fetchSpotifyPlaylist(value.id).then(playlist =>
-        playlistStorage.set(playlist)
-      )
-    else component.state.playlist = value
-  })
+    if (!value) {
+      hasPlaylist = false
+      navigate('/trip-duration')
+      return
+    }
+  })()
+  if (hasPlaylist)
+    playlistStorage.subscribe(value => {
+      if (!value.images.length)
+        fetchSpotifyPlaylist(value.id).then(playlist =>
+          playlistStorage.set(playlist)
+        )
+      else component.state.playlist = value
+    })
 }
 
 function updated(component) {

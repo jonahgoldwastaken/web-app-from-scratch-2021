@@ -78,7 +78,8 @@
   top: 0;
   z-index: 1;
   text-align: center;
-  padding-bottom: var(--half-margin);
+  line-height: 1;
+  padding: var(--half-margin) 0;
 }
 
 [class='/generate'] .details-overview {
@@ -90,4 +91,9 @@
 [class='/generate'] main:not(.generating) {
   margin-top: var(--base-margin);
   height: 100%;
+}
+
+[class='/generate'] li div {
+  display: flex;
+  flex-direction: column;
 }

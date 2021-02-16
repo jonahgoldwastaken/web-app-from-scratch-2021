@@ -68,6 +68,37 @@ async function updated(component) {
         },
         true
       )
+      saveButton.addEventListener(
+        'click',
+        () => {
+          component.state.saving = true
+          saveListToSpotify(component)
+        },
+        true
+      )
+
+      const previewButtons = [].slice.call(
+        document.querySelectorAll('[data-preview]')
+      )
+      previewButtons.forEach(button =>
+        button.addEventListener('click', toggleSongPreview)
+      )
+
+      const audioElement = document.querySelector('[data-audio]')
+      audioElement.addEventListener('ended', audioEndedHandler)
+
+      const swapButtons = [].slice.call(
+        document.querySelectorAll('[data-swap]')
+      )
+      swapButtons.forEach(button =>
+        button.addEventListener('click', async e => {
+          component.state.list = await swapSong(
+            component.state.topTracks,
+            component.state.list,
+            e
+          )
+        })
+      )
     }
   }
 }
@@ -76,12 +107,63 @@ async function* generateList(route, tracks) {
   let list = []
   while (getListInfo(list).totalTime < route.travelDuration) {
     await sleep(400)
-    const freshTracks = await fetchRecommendations(tracks)
-    const filteredTracks = freshTracks.filter(filterOutTracksInList(list))
+    const newTracks = await fetchRecommendations(tracks)
+    const filteredTracks = newTracks.filter(filterOutTracksInList(list))
     list = [...list, ...filteredTracks]
     yield list
   }
   return trimList(list, route.travelDuration)
+}
+
+function toggleSongPreview(e) {
+  const oldPlayStatus = document.querySelector(
+    '[data-preview] img[src="/assets/pause.svg"]'
+  )
+  if (oldPlayStatus) oldPlayStatus.src = '/assets/play.svg'
+  const oldPlayButton = document.querySelector('.playing')
+  if (oldPlayButton) oldPlayButton.classList.remove('playing')
+
+  const previewButton = e.currentTarget
+  const playStatus = previewButton.querySelector('img[src$="svg"]')
+  const audioElement = document.querySelector('[data-audio]')
+
+  const previewUrl = previewButton.dataset.preview
+
+  if (audioElement.src !== previewUrl) {
+    audioElement.src = previewUrl
+    audioElement.currentTime = 0
+    audioElement.play()
+    playStatus.src = '/assets/pause.svg'
+    previewButton.classList.add('playing')
+  } else if (audioElement.paused) {
+    audioElement.play()
+    playStatus.src = '/assets/pause.svg'
+    previewButton.classList.add('playing')
+  } else {
+    audioElement.pause()
+    audioElement.currentTime = 0
+    previewButton.classList.remove('playing')
+  }
+}
+
+function audioEndedHandler(e) {
+  const previewUrl = e.currentTarget.src
+  const previewButton = document.querySelector(`[data-preview="${previewUrl}"`)
+  const previewStatus = previewButton.querySelector('[src="/assets/pause.svg"')
+  previewStatus.src = '/assets/play.svg'
+  previewButton.classList.remove('playing')
+}
+
+async function swapSong(topTracks, list, e) {
+  const index = list.findIndex(
+    track => track.id === e.currentTarget.dataset.swap
+  )
+  let newTrack
+  do {
+    const data = await fetchRecommendations(topTracks, 1)
+    newTrack = data[0]
+  } while (filterOutTracksInList(list)(newTrack))
+  return [...list.slice(0, index), newTrack, ...list.slice(index + 1)]
 }
 
 async function saveListToSpotify(component) {

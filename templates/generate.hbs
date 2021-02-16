@@ -45,9 +45,21 @@
         <div>
           <span>{{track.name}}</span>
           <span>{{track.artists.0.name}} - {{track.album.name}}</span>
+          {{#if (validUrl track.preview_url)}}
+            <button class="pill green" data-preview="{{track.preview_url}}">
+              <img src="/assets/spotify_icon.png" alt="Spotify icon" />
+              Preview
+              <img src='/assets/play.svg' alt='Play' />
+            </button>
+          {{/if}}
+          <button class="pill orange" data-swap="{{track.id}}">
+            <img src="/assets/swap.svg" alt="Swap icon" />
+            Swap
+          </button>
         </div>
       </li>
       {{/each}}
     </ul>
   </main>
+  <audio data-audio volume="0.05" class="hidden"></audio>
 {{/unless}}
