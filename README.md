@@ -77,10 +77,10 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 - [x] Get estimated time for a trip
 - [x] Choose songs from top songs for seeding
 - [x] Save playlist
+- [x] Swap songs from recommended playlist
+- [x] Preview songs
+- [x] Beautiful design
 - [ ] Change length of trip
-- [ ] Remove songs from recommended playlist
-- [ ] Preview songs
-- [ ] Beautiful design
 
 ## actor diagram
 
