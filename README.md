@@ -2,7 +2,7 @@
 
 [![Badge stating project is licensed under MIT license](https://img.shields.io/github/license/theonejonahgold/web-app-from-scratch-2021)](https://github.com/theonejonahgold/web-app-from-scratch-2021/blob/master/LICENSE) [![Badge stating amount of issues open](https://img.shields.io/github/issues/theonejonahgold/web-app-from-scratch-2021)](https://github.com/theonejonahgold/web-app-from-scratch-2021/issues) [![](https://img.shields.io/badge/site--status-up-success)](https://triptop.app) [![Badges via shields.io](https://img.shields.io/badge/badges%20via-shields.io-brightgreen)](shields.io)
 
-[Link to live version](https://theonejonahgold.github.io/web-app-from-scratch-2021)
+[Link to live version](https://triptop.app)
 
 A web app built from scratch giving you a Spotify playlist that is the perfect length for your trip.
 
