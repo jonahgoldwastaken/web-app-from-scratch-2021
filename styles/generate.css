@@ -27,12 +27,30 @@
   font-size: var(--step-1);
 }
 
+@media screen and (min-width: 60rem) {
+  [class='/generate'] .generating > div:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+
+  [class='/generate'] .generating > div:first-of-type p:first-child {
+    margin-right: var(--half-margin);
+  }
+
+  [class='/generate'] .generating > div:first-of-type p:last-child {
+    margin-left: var(--half-margin);
+  }
+}
+
 [class='/generate'] .generating > :last-child {
   display: grid;
-  max-width: 40rem;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas: 'from to' 'progress progress' 'start end';
+  padding-right: var(--base-margin);
+  padding-left: var(--base-margin);
   margin-bottom: var(--double-margin);
 }
 

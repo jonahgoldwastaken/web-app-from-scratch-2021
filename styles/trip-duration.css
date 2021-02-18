@@ -1,61 +1,90 @@
 [class='/trip-duration'] h1 {
   padding: var(--step-1);
-  width: 70vw;
+  width: 50vw;
   position: relative;
 }
 
-[class='/trip-duration'] h1:before {
-  content: '';
-  width: 100vw;
-  height: 70vw;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
+[class='/trip-duration'] {
   background: radial-gradient(
-      circle at center,
+      circle at 29vmin 20vmin,
       var(--orange),
-      var(--orange) 40%,
-      transparent 40%
+      var(--orange) 50vmin,
+      transparent 50vmin
     )
     no-repeat;
-  background-size: 200% 200%;
-  background-position: 70% 120%;
 }
 
-@media screen and (min-width: 60rem) {
-  [class='/trip-duration'] h1:before {
-    background-position: 80% 140%;
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+  [class='/trip-duration'] {
+    background: radial-gradient(
+        circle at 15vmin -5vmin,
+        var(--orange),
+        var(--orange) 50vw,
+        transparent 50vw
+      )
+      no-repeat;
   }
 }
 
-@media screen and (min-width: 70rem) {
-  [class='/trip-duration'] h1:before {
-    background-position: 65% 130%;
+@media screen and (min-width: 30rem) and (orientation: landscape) {
+  [class='/trip-duration'] {
+    background: radial-gradient(
+        circle at 25vmin -30vmin,
+        var(--orange),
+        var(--orange) 50vw,
+        transparent 50vw
+      )
+      no-repeat;
   }
 }
 
-@media screen and (min-width: 100rem) {
-  [class='/trip-duration'] h1:before {
-    background-position: 70% 140%;
+@media screen and (min-width: 40rem) and (orientation: portrait) {
+  [class='/trip-duration'] {
+    background: radial-gradient(
+        circle at 20vmin -20vmin,
+        var(--orange),
+        var(--orange) 50vw,
+        transparent 50vw
+      )
+      no-repeat;
   }
 }
 
-@media screen and (min-width: 120rem) {
-  [class='/trip-duration'] h1:before {
-    background-position: 75% 150%;
+@media screen and (min-width: 50rem) and (orientation: landscape) {
+  [class='/trip-duration'] {
+    background: radial-gradient(
+        circle at 22vmin -25vmin,
+        var(--orange),
+        var(--orange) 50vw,
+        transparent 50vw
+      )
+      no-repeat;
   }
 }
 
-@media screen and (min-width: 160rem) {
-  [class='/trip-duration'] h1:before {
-    background-position: 81% 158%;
+@media screen and (min-width: 80rem) and (orientation: landscape) {
+  [class='/trip-duration'] {
+    background: radial-gradient(
+        circle at 20vmin -30vmax,
+        var(--orange),
+        var(--orange) 50vw,
+        transparent 50vw
+      )
+      no-repeat;
   }
 }
 
 [class='/trip-duration'] main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: var(--double-margin) 0;
+  padding: 0 var(--base-margin);
+}
+
+[class='/trip-duration'] main input {
+  width: 100%;
+}
+
+@media screen and (min-width: 60rem) {
+  [class='/trip-duration'] main {
+    margin-top: calc(var(--double-margin) * 2);
+  }
 }

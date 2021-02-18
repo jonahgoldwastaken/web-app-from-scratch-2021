@@ -121,6 +121,7 @@ button:disabled {
   text-transform: uppercase;
   border-radius: 2.125em;
   box-shadow: 0px 8px 8px -8px var(--green-transparent);
+  white-space: nowrap;
 }
 
 .button-spotify:hover,
