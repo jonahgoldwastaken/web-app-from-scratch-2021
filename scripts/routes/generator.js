@@ -96,6 +96,13 @@ async function updated(component) {
   }
 }
 
+/**
+ * Generator function that generates the playlist, yielding every time the list is updated
+ * @param {object} route The route object
+ * @param {array} topTracks The list of top tracks to be used with recommendation fetching
+ * @yields {array} List of songs
+ * @returns {array} List of songs
+ */
 async function* generateList(route, topTracks) {
   let list = []
   while (getListInfo(list).totalTime < route.travelDuration) {
@@ -108,6 +115,10 @@ async function* generateList(route, topTracks) {
   return trimList(list, route.travelDuration)
 }
 
+/**
+ * Toggles the song preview, handling all possible states like switching, playing and pausing.
+ * @param {MouseEvent} e The mouse click event on the preview button
+ */
 function toggleSongPreview(e) {
   const oldPlayStatus = document.querySelector(
     '[data-preview] img[src="/assets/pause.svg"]'
@@ -139,14 +150,25 @@ function toggleSongPreview(e) {
   }
 }
 
+/**
+ * Handles the audio element 'ended' event, putting everything back into its default state.
+ * @param {Event} e The audio 'ended' event
+ */
 function audioEndedHandler(e) {
   const previewUrl = e.currentTarget.src
   const previewButton = document.querySelector(`[data-preview="${previewUrl}"`)
-  const previewStatus = previewButton.querySelector('[src="/assets/pause.svg"')
+  const previewStatus = previewButton.querySelector('[src="/assets/pause.svg"]')
   previewStatus.src = '/assets/play.svg'
   previewButton.classList.remove('playing')
 }
 
+/**
+ * Swaps a song in the list with a new song at the same place.
+ * @param {array} topTracks array of top tracks used for seeding
+ * @param {array} list The current playlist
+ * @param {MouseEvent} e The mouseclick event
+ * @returns {array} The playlist with the new song
+ */
 async function swapSong(topTracks, list, e) {
   const index = list.findIndex(
     track => track.id === e.currentTarget.dataset.swap
@@ -159,6 +181,9 @@ async function swapSong(topTracks, list, e) {
   return [...list.slice(0, index), newTrack, ...list.slice(index + 1)]
 }
 
+/**
+ * @param {object} component The page component
+ */
 async function saveListToSpotify(component) {
   const { list, route } = component.state
   const departure =
