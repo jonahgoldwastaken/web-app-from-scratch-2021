@@ -68,14 +68,6 @@ async function updated(component) {
         },
         true
       )
-      saveButton.addEventListener(
-        'click',
-        () => {
-          component.state.saving = true
-          saveListToSpotify(component)
-        },
-        true
-      )
 
       const previewButtons = [].slice.call(
         document.querySelectorAll('[data-preview]')
