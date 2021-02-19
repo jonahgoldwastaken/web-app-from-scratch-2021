@@ -80,7 +80,14 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 - [x] Swap songs from recommended playlist
 - [x] Preview songs
 - [x] Beautiful design
-- [ ] Change length of trip
+- [ ] Change length of playlist
+
+## Future prospects
+
+- Add more music streaming services
+- Generate popular songs from the countries you're driving through
+- Generate movies that span the length of the trip
+- Maybe make it a general travel preparation tool
 
 ## actor diagram
 
