@@ -44,7 +44,7 @@ $ browser-sync -w -s --port 5000 # Starts a browser-sync server on port 5000 tha
   - **utils**: Single-purpose functions that can be used on their own or combined. They're separated over files named after their main concern.
   - **main.js**: The start of the application
 - **styles**: Where all CSS goes
-  - main.css: Where all the styling comes together.
+  - **main.css**: Where all the styling comes together.
 - **templates**: Where all Handlebars templates live.
 - **assets**: For images and other types of media assets.
 - **index.html**: The entrypoint for the application.
