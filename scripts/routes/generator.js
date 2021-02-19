@@ -177,11 +177,12 @@ async function swapSong(topTracks, list, e) {
   do {
     const data = await fetchRecommendations(topTracks, 1)
     newTrack = data[0]
-  } while (filterOutTracksInList(list)(newTrack))
+  } while (!filterOutTracksInList(list)(newTrack))
   return [...list.slice(0, index), newTrack, ...list.slice(index + 1)]
 }
 
 /**
+ * Saves the playlist to Spotify with the correct name and songs
  * @param {object} component The page component
  */
 async function saveListToSpotify(component) {
