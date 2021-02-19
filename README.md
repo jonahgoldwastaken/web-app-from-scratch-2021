@@ -103,3 +103,9 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 - PubSub pattern
 - Composition pattern
 - Hash routing
+
+## References
+
+- [Handlebars documentation](https://handlebarsjs.com)
+- [Svelte store as inspiration for my own store system](https://github.com/sveltejs/svelte/blob/master/src/runtime/store/index.ts)
+- [Object.defineProperty for use in my state function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
