@@ -5,13 +5,13 @@
       <p>Duration<strong>{{durationFormatter list}}</strong></p>
       <p>Songs<strong>{{list.length}}</strong></p>
     </div>
-    {{#if route}}
+    {{#if trip}}
       <div>
-        <p>{{cityName route.startLocation}}</p>
-        <p>{{cityName route.endLocation}}</p>
-        <progress max="100" value="{{progress list route}}">{{progress list route}}%</progress>
+        <p>{{cityName trip.startLocation}}</p>
+        <p>{{cityName trip.endLocation}}</p>
+        <progress max="100" value="{{progress list trip}}">{{progress list trip}}%</progress>
         <p>00:00</p>
-        <p>{{timeFormatter route.travelDuration}}</p>
+        <p>{{timeFormatter trip.travelDuration}}</p>
       </div>
     {{/if}}
   </main>
@@ -21,8 +21,8 @@
   <h1>Your Triptop list</h1>
   <div>
     <ul class='details-overview details-overview-light'>
-      <li><span>From</span>{{cityName route.startLocation}}</li>
-      <li><span>To</span>{{cityName route.endLocation}}</li>
+      <li><span>From</span>{{cityName trip.startLocation}}</li>
+      <li><span>To</span>{{cityName trip.endLocation}}</li>
       <li><span>Duration</span>{{durationFormatter list}}</li>
       <li><span>Songs</span>{{list.length}}</li>
     </ul>

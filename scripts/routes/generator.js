@@ -28,7 +28,7 @@ async function generator() {
       generating: true,
       list: [],
       topTracks: null,
-      route: null,
+      trip: null,
       saving: false,
     },
     { mounted, updated }
@@ -38,7 +38,7 @@ async function generator() {
 async function mounted(component) {
   tripStorage.subscribe(val => {
     if (!val) navigate('/trip-duration')
-    else component.state.route = val
+    else component.state.trip = val
   })()
   trackStorage.subscribe(val => {
     if (!val) navigate('/trip-duration')
@@ -47,10 +47,10 @@ async function mounted(component) {
 }
 
 async function updated(component) {
-  if (component.state.topTracks && component.state.route) {
+  if (component.state.topTracks && component.state.trip) {
     if (!component.state.list.length) {
       for await (const list of generateList(
-        component.state.route,
+        component.state.trip,
         component.state.topTracks
       )) {
         component.state.list = list
@@ -98,21 +98,21 @@ async function updated(component) {
 
 /**
  * Generator function that generates the playlist, yielding every time the list is updated
- * @param {object} route The route object
+ * @param {object} trip The trip object
  * @param {array} topTracks The list of top tracks to be used with recommendation fetching
  * @yields {array} List of songs
  * @returns {array} List of songs
  */
-async function* generateList(route, topTracks) {
+async function* generateList(trip, topTracks) {
   let list = []
-  while (getListInfo(list).totalTime < route.travelDuration) {
+  while (getListInfo(list).totalTime < trip.travelDuration) {
     await sleep(400)
     const newTracks = await fetchRecommendations(topTracks)
     const filteredTracks = newTracks.filter(filterOutTracksInList(list))
     list = [...list, ...filteredTracks]
     yield list
   }
-  return trimList(list, route.travelDuration)
+  return trimList(list, trip.travelDuration)
 }
 
 /**
@@ -186,15 +186,15 @@ async function swapSong(topTracks, list, e) {
  * @param {object} component The page component
  */
 async function saveListToSpotify(component) {
-  const { list, route } = component.state
+  const { list, trip } = component.state
   const departure =
-    route.startLocation.address.adminDistrict2 ||
-    route.startLocation.address.adminDistrict ||
-    route.startLocation.name
+    trip.startLocation.address.adminDistrict2 ||
+    trip.startLocation.address.adminDistrict ||
+    trip.startLocation.name
   const arrival =
-    route.endLocation.address.adminDistrict2 ||
-    route.endLocation.address.adminDistrict ||
-    route.endLocation.name
+    trip.endLocation.address.adminDistrict2 ||
+    trip.endLocation.address.adminDistrict ||
+    trip.endLocation.name
   const playlist = await createSpotifyPlaylist(departure, arrival)
   if (await populateSpotifyPlaylist(playlist.id, list)) {
     playlistStorage.set(playlist)

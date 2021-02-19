@@ -1,31 +1,31 @@
 <h1>Where is the trip headed?</h1>
 <main>
-  {{#if route}}
+  {{#if trip}}
     <h2>Trip details</h2>
     <ul class="details-overview">
-      <li><span>From</span> {{cityName route.startLocation}}</li>
-      <li><span>To</span> {{cityName route.endLocation}}</li>
-      <li><span>Duration</span> {{timeFormatter route.travelDuration}} hours</li>
-      <li><span>Distance</span> {{distanceFormatter route.travelDistance}} km</li>
+      <li><span>From</span> {{cityName trip.startLocation}}</li>
+      <li><span>To</span> {{cityName trip.endLocation}}</li>
+      <li><span>Duration</span> {{timeFormatter trip.travelDuration}} hours</li>
+      <li><span>Distance</span> {{distanceFormatter trip.travelDistance}} km</li>
     </ul>
     <button data-confirm>Confirm</button>
   {{/if}}
-{{#if route}}
+{{#if trip}}
 <h2>Edit trip</h2>
 {{/if}}
-  <form data-route>
+  <form data-trip>
     <label>
       From
-      {{#if route}}
-        <input type="text" name="departure" value="{{cityName route.startLocation}}" placeholder="Amsterdam" />
+      {{#if trip}}
+        <input type="text" name="departure" value="{{cityName trip.startLocation}}" placeholder="Amsterdam" />
       {{else}}
         <input type="text" name="departure" placeholder="Amsterdam" />
       {{/if}}
     </label>
     <label>
       To
-      {{#if route}}
-        <input type="text" name="arrival" value="{{cityName route.endLocation}}" placeholder="Budapest" />
+      {{#if trip}}
+        <input type="text" name="arrival" value="{{cityName trip.endLocation}}" placeholder="Budapest" />
       {{else}}
         <input type="text" name="arrival" placeholder="Budapest" />
       {{/if}}

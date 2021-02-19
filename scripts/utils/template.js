@@ -30,8 +30,8 @@ handlebars.registerHelper('durationFormatter', function (list) {
   return `${hours}:${minutes < 10 ? `0${minutes}` : minutes}:${parsedSeconds < 10 ? `0${parsedSeconds}` : parsedSeconds}`
 })
 
-handlebars.registerHelper('progress', function (list, route) {
-  return (getListInfo(list).totalTime / route.travelDuration) * 100
+handlebars.registerHelper('progress', function (list, trip) {
+  return (getListInfo(list).totalTime / trip.travelDuration) * 100
 })
 
 handlebars.registerHelper('validUrl', function (string) {

@@ -1,14 +1,14 @@
 import { ROUTE_URI } from '../constants/bingMaps.js'
 import { fetchAndParseJSON } from '../modules/fetch.js'
 
-export { fetchRoute }
+export { fetchTrip }
 
 /**
- * Calculates the route for the provided locations
- * @param  {...string} locations Location strings to include in the route
- * @returns {object} The first and only leg of the calculated route
+ * Calculates the trip for the provided locations
+ * @param  {...string} locations Location strings to include in the trip
+ * @returns {object} The first and only leg of the calculated trip
  */
-async function fetchRoute(...locations) {
+async function fetchTrip(...locations) {
   const { resourceSets } = await fetchAndParseJSON(
     `${ROUTE_URI}${locations.map((l, i) =>
       i === 0 || i === locations.length - 1
