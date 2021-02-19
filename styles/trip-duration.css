@@ -5,6 +5,9 @@
 }
 
 [class='/trip-duration'] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: radial-gradient(
       circle at 29vmin 20vmin,
       var(--orange),
@@ -65,26 +68,26 @@
 @media screen and (min-width: 80rem) and (orientation: landscape) {
   [class='/trip-duration'] {
     background: radial-gradient(
-        circle at 20vmin -30vmax,
+        circle at 20vmin -50vmin,
         var(--orange),
-        var(--orange) 50vw,
-        transparent 50vw
+        var(--orange) 80vmin,
+        transparent 80vmin
       )
       no-repeat;
   }
-}
-
-[class='/trip-duration'] main {
-  margin: var(--double-margin) 0;
-  padding: 0 var(--base-margin);
 }
 
 [class='/trip-duration'] main input {
   width: 100%;
 }
 
-@media screen and (min-width: 60rem) {
+[class='/trip-duration'] main {
+  margin: auto;
+  padding: 0 var(--base-margin);
+}
+
+@media screen and (max-height: 50rem) {
   [class='/trip-duration'] main {
-    margin-top: calc(var(--double-margin) * 2);
+    margin-bottom: 0;
   }
 }

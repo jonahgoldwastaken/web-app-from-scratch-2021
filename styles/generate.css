@@ -101,8 +101,6 @@
 }
 
 [class='/generate'] .details-overview {
-  max-width: 40rem;
-  width: min-content;
   margin: 0 auto;
 }
 

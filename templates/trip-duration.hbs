@@ -16,11 +16,19 @@
   <form data-route>
     <label>
       From
-      <input type="text" name="departure" placeholder="Amsterdam" />
+      {{#if route}}
+        <input type="text" name="departure" value="{{cityName route.startLocation}}" placeholder="Amsterdam" />
+      {{else}}
+        <input type="text" name="departure" placeholder="Amsterdam" />
+      {{/if}}
     </label>
     <label>
       To
-      <input type="text" name="arrival" placeholder="Budapest" />
+      {{#if route}}
+        <input type="text" name="arrival" value="{{cityName route.endLocation}}" placeholder="Budapest" />
+      {{else}}
+        <input type="text" name="arrival" placeholder="Budapest" />
+      {{/if}}
       </label>
     <button>Search</button>
   </form>

@@ -85,6 +85,7 @@ async function updated(component) {
       )
 
       const audioElement = document.querySelector('[data-audio]')
+      audioElement.volume = 0.5
       audioElement.addEventListener('ended', audioEndedHandler)
 
       const swapButtons = [].slice.call(
