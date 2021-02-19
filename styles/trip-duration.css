@@ -9,72 +9,12 @@
   flex-direction: column;
   justify-content: space-between;
   background: radial-gradient(
-      circle at 29vmin 20vmin,
+      circle at 15vw -40vmax,
       var(--orange),
-      var(--orange) 50vmin,
-      transparent 50vmin
+      var(--orange) clamp(40rem, 60vw, 80rem),
+      transparent clamp(40rem, 60vw, 80rem)
     )
     no-repeat;
-}
-
-@media screen and (min-width: 30rem) and (orientation: portrait) {
-  [class='/trip-duration'] {
-    background: radial-gradient(
-        circle at 15vmin -5vmin,
-        var(--orange),
-        var(--orange) 50vw,
-        transparent 50vw
-      )
-      no-repeat;
-  }
-}
-
-@media screen and (min-width: 30rem) and (orientation: landscape) {
-  [class='/trip-duration'] {
-    background: radial-gradient(
-        circle at 25vmin -30vmin,
-        var(--orange),
-        var(--orange) 50vw,
-        transparent 50vw
-      )
-      no-repeat;
-  }
-}
-
-@media screen and (min-width: 40rem) and (orientation: portrait) {
-  [class='/trip-duration'] {
-    background: radial-gradient(
-        circle at 20vmin -20vmin,
-        var(--orange),
-        var(--orange) 50vw,
-        transparent 50vw
-      )
-      no-repeat;
-  }
-}
-
-@media screen and (min-width: 50rem) and (orientation: landscape) {
-  [class='/trip-duration'] {
-    background: radial-gradient(
-        circle at 22vmin -25vmin,
-        var(--orange),
-        var(--orange) 50vw,
-        transparent 50vw
-      )
-      no-repeat;
-  }
-}
-
-@media screen and (min-width: 80rem) and (orientation: landscape) {
-  [class='/trip-duration'] {
-    background: radial-gradient(
-        circle at 20vmin -50vmin,
-        var(--orange),
-        var(--orange) 80vmin,
-        transparent 80vmin
-      )
-      no-repeat;
-  }
 }
 
 [class='/trip-duration'] main input {

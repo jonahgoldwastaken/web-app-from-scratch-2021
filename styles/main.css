@@ -473,7 +473,7 @@ progress[value] {
 }
 
 .pill.playing img:first-of-type {
-  animation: play 5s linear infinite;
+  animation: play 30s linear infinite;
 }
 
 @keyframes play {
@@ -492,6 +492,16 @@ progress[value] {
 
 .pill.orange {
   background: var(--orange);
+}
+
+.pill.swapping img:first-of-type {
+  animation: swap 1s cubic-bezier(0.79, -0.62, 0.11, 1.58) infinite;
+}
+
+@keyframes swap {
+  to {
+    transform: rotate(0.5turn);
+  }
 }
 
 .hidden {

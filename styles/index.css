@@ -20,7 +20,7 @@
   );
   background-repeat: no-repeat;
   background-size: 200% 200%;
-  background-position: 80% 50%;
+  background-position: 90% 50%;
   padding: 4rem 8rem 0 0;
   color: white;
   font-size: var(--step--1);
@@ -34,36 +34,12 @@
 
 [class='/'] {
   background: radial-gradient(
-      circle at center 10%,
+      circle at center -10%,
       var(--tertiary) 0%,
-      var(--tertiary) 60vmin,
-      transparent 50vmin
+      var(--tertiary) clamp(20rem, 60vmin, 30rem),
+      transparent clamp(20rem, 60vmin, 30rem)
     )
     no-repeat;
-}
-
-@media screen and (min-width: 23rem) {
-  [class='/'] {
-    background: radial-gradient(
-        circle at center 0%,
-        var(--tertiary) 0%,
-        var(--tertiary) 60vmin,
-        transparent 50vmin
-      )
-      no-repeat;
-  }
-}
-
-@media screen and (min-width: 23rem) and (orientation: landscape) {
-  [class='/'] {
-    background: radial-gradient(
-        circle at center -20%,
-        var(--tertiary) 0%,
-        var(--tertiary) 60vmin,
-        transparent 60vmin
-      )
-      no-repeat;
-  }
 }
 
 [class='/'] header {

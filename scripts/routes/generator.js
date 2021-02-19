@@ -170,14 +170,15 @@ function audioEndedHandler(e) {
  * @returns {array} The playlist with the new song
  */
 async function swapSong(topTracks, list, e) {
-  const index = list.findIndex(
-    track => track.id === e.currentTarget.dataset.swap
-  )
+  const swapButton = e.currentTarget
+  swapButton.classList.add('swapping')
+  const index = list.findIndex(track => track.id === swapButton.dataset.swap)
   let newTrack
   do {
     const data = await fetchRecommendations(topTracks, 1)
     newTrack = data[0]
   } while (!filterOutTracksInList(list)(newTrack))
+  swapButton.classList.remove('swapping')
   return [...list.slice(0, index), newTrack, ...list.slice(index + 1)]
 }
 
