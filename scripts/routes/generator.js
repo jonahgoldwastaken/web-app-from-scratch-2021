@@ -214,7 +214,7 @@ async function swapSong(topTracks, list, e) {
  * @param {array} topTracks Array of top tracks used for seeding
  * @param {array} list The current Playlist
  * @param {MouseEvent} e The mouseclick event
- * @returns {array} The updated list
+ * @returns {Promise<Array>} The updated list
  */
 async function modifyPlaylist(type, topTracks, list, e) {
   const submitButton = e.currentTarget
@@ -226,7 +226,12 @@ async function modifyPlaylist(type, topTracks, list, e) {
       let newSongs = []
       do {
         const data = await fetchRecommendations(topTracks, amount)
-        newSongs = [...newSongs, ...data.filter(filterOutTracksInList(list))]
+        newSongs = [
+          ...newSongs,
+          ...data
+            .filter(filterOutTracksInList(list))
+            .filter(filterOutTracksInList(newSongs)),
+        ]
       } while (newSongs.length < amount)
       return [...newSongs.slice(0, amount), ...list]
     case 'remove':
