@@ -98,8 +98,13 @@ async function fetchRecommendations(ids, limit = 20) {
  * @param {array} tracks tracks array to filter
  * @returns {Function} Filter function that takes a track to use in Array.prototype.filter
  */
-function filterOutTracksInList(tracks) {
-  return track => tracks.findIndex(t => t.id === track.id) === -1
+function filterOutTracksInList(tracks, track) {
+  if (!track) return filterFunc
+  return filterFunc(track)
+
+  function filterFunc(track) {
+    return tracks.findIndex(t => t.id === track.id) === -1
+  }
 }
 
 /**

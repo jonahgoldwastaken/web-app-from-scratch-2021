@@ -80,7 +80,7 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 - [x] Swap songs from recommended playlist
 - [x] Preview songs
 - [x] Beautiful design
-- [ ] Change length of playlist
+- [x] Change length of playlist
 
 ## Future prospects
 

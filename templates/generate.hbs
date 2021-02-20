@@ -39,6 +39,22 @@
       </button>
     {{/unless}}
     <ul id="tracks-list">
+      <li id="modify-list">
+        <div id="add">
+          <label>
+            Add songs
+            <input type='number' value="1" min="1" step="1" max="20">
+          </label>
+          <button>Add</button>
+        </div>
+        <div id="remove">
+          <label>
+            Remove songs
+            <input type='number' value="1" min="1" step="1" max="20">
+          </label>
+          <button>Remove</button>
+        </div>
+      </li>
       {{#each list as |track|}}
       <li>
         <img src="{{track.album.images.0.url}}" alt='Album cover for {{track.album.name}}'>

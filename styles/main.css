@@ -151,7 +151,8 @@ label + label {
   margin-top: var(--double-margin);
 }
 
-input[type='text'] {
+input[type='text'],
+input[type='number'] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;

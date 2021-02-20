@@ -92,6 +92,32 @@ async function updated(component) {
           )
         })
       )
+
+      const listAddButton = document.querySelector('#modify-list #add button')
+      const listRemoveButton = document.querySelector(
+        '#modify-list #remove button'
+      )
+
+      listAddButton.addEventListener(
+        'click',
+        async e =>
+          (component.state.list = await modifyPlaylist(
+            'add',
+            component.state.topTracks,
+            component.state.list,
+            e
+          ))
+      )
+      listRemoveButton.addEventListener(
+        'click',
+        async e =>
+          (component.state.list = await modifyPlaylist(
+            'remove',
+            component.state.topTracks,
+            component.state.list,
+            e
+          ))
+      )
     }
   }
 }
@@ -164,10 +190,10 @@ function audioEndedHandler(e) {
 
 /**
  * Swaps a song in the list with a new song at the same place.
- * @param {array} topTracks array of top tracks used for seeding
+ * @param {array} topTracks Array of top tracks used for seeding
  * @param {array} list The current playlist
  * @param {MouseEvent} e The mouseclick event
- * @returns {array} The playlist with the new song
+ * @returns {Promise<Array>} The playlist with the new song
  */
 async function swapSong(topTracks, list, e) {
   const swapButton = e.currentTarget
@@ -177,9 +203,35 @@ async function swapSong(topTracks, list, e) {
   do {
     const data = await fetchRecommendations(topTracks, 1)
     newTrack = data[0]
-  } while (!filterOutTracksInList(list)(newTrack))
+  } while (!filterOutTracksInList(list, newTrack))
   swapButton.classList.remove('swapping')
   return [...list.slice(0, index), newTrack, ...list.slice(index + 1)]
+}
+
+/**
+ * Modifies a playlist, adding or removing songs from it
+ * @param {string} type The type of modification applied to the playlist, 'add' or 'remove'
+ * @param {array} topTracks Array of top tracks used for seeding
+ * @param {array} list The current Playlist
+ * @param {MouseEvent} e The mouseclick event
+ * @returns {array} The updated list
+ */
+async function modifyPlaylist(type, topTracks, list, e) {
+  const submitButton = e.currentTarget
+  const input = submitButton.previousElementSibling.querySelector('input')
+  const amount = input.value
+
+  switch (type) {
+    case 'add':
+      let newSongs = []
+      do {
+        const data = await fetchRecommendations(topTracks, amount)
+        newSongs = [...newSongs, ...data.filter(filterOutTracksInList(list))]
+      } while (newSongs.length < amount)
+      return [...newSongs.slice(0, amount), ...list]
+    case 'remove':
+      return list.slice(0, list.length - amount)
+  }
 }
 
 /**
