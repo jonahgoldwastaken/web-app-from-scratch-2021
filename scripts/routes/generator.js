@@ -55,6 +55,7 @@ async function updated(component) {
       )) {
         component.state.list = list
       }
+      await sleep(100)
       component.state.generating = false
       return
     }
@@ -132,7 +133,7 @@ async function updated(component) {
 async function* generateList(trip, topTracks) {
   let list = []
   while (getListInfo(list).totalTime < trip.travelDuration) {
-    await sleep(400)
+    if (list.length) await sleep(400)
     const newTracks = await fetchRecommendations(topTracks)
     const filteredTracks = newTracks.filter(filterOutTracksInList(list))
     list = [...list, ...filteredTracks]
