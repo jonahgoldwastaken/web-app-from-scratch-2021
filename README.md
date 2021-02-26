@@ -4,7 +4,7 @@
 
 [Link to live version](https://triptop.app)
 
-A web app built from scratch giving you a Spotify playlist that is the perfect length for your trip.
+Creating the perfect roadtrip playlist based on your music taste.
 
 ## Index
 
@@ -12,8 +12,11 @@ A web app built from scratch giving you a Spotify playlist that is the perfect l
 - [Folder structure](#folder-structure)
 - [APIs used](#apis-used)
 - [Features](#features)
-- [User Interaction Flow](#user-interaction-flow)
+- [Future prospects](#future-prospects)
+- [Actor diagram](#action-diagram)
+- [Interaction diagram](#interaction-diagram)
 - [Design patterns used](#design-patterns-used)
+- [References](#references)
 
 ## Getting started
 
@@ -61,13 +64,13 @@ The Spotify API is extremely expansive. From user information to the devices the
 
 If you have created one, be sure to set the redirect URIs to 'http://localhost:5000' and the URL you are hosting this app on.
 
-### [Mapquest Directions API](https://developer.mapquest.com/documentation/directions-api/route/get/)
+### [Bing Maps API](https://www.bingmapsportal.com)
 
-The Mapquest API is quite large, and has a lot of features related to mapping. We are only using the Directions API to see how long a trip takes.
+The Bing Maps API is quite large, and has a lot of features related to mapping. We are only using the [Route Data API](https://docs.microsoft.com/en-us/bingmaps/rest-services/routes/route-data) to see how long a trip takes.
 
-This API has a rate limit of 150000 per month before you've got to pony up, so keep that in mind.
+This API has a rate limit of 125,000 transactions per year before you have to pony up, so keep that in mind.
 
-Create an account [here](https://developer.mapquest.com/user/register) and get your API key from the dashboard.
+[Follow this guide](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) to get started.
 
 ## Features
 
@@ -89,7 +92,7 @@ Create an account [here](https://developer.mapquest.com/user/register) and get y
 - Generate movies that span the length of the trip
 - Maybe make it a general travel preparation tool
 
-## actor diagram
+## Actor diagram
 
 ![Action diagram of app](assets/actor_diagram.png)
 
