@@ -18,7 +18,6 @@ function router(routes) {
   let currentComponent
 
   window.addEventListener('hashchange', renderRoute)
-  renderRoute()
 
   async function renderRoute() {
     const route = findCurrentRoute(routes)
